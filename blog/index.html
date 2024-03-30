@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The order of elements in the head follows recommendations by Harry Roberts. learn more here: https://www.youtube.com/watch?v=MHyAOZ45vnU -->
+<head>
+<!-- charset/http-equiv/viewport -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>
+      
+        Blog
+      
+    </title>
+<!-- 4 synchronous js  -->
+<!-- load theme toggle first to avoid color flashing on page load and inline render blocking js  -->
+
+<script>
+// prettier-ignore
+(()=>{var r="theme-preference",c="light",u="dark",t={value:n()};window.onload=()=>{let e=document.querySelector("#light-theme-toggle"),o=document.querySelector("#dark-theme-toggle"),d=document.querySelector("[data-theme-switcher]");d&&(d.removeAttribute("hidden"),a(),e.addEventListener("click",()=>l("light")),o.addEventListener("click",()=>l("dark")),e.setAttribute("aria-pressed",t.value==="light"),o.setAttribute("aria-pressed",t.value==="dark"))},window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t.value=e?"dark":"light",i()});function l(e){t.value=e,document.querySelector("#light-theme-toggle").setAttribute("aria-pressed",e==="light"),document.querySelector("#dark-theme-toggle").setAttribute("aria-pressed",e==="dark"),i()}function n(){return localStorage.getItem(r)?localStorage.getItem(r):window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function i(){localStorage.setItem(r,t.value),a()}function a(){document.firstElementChild.setAttribute("data-theme",t.value),document.querySelector("#light-theme-toggle")?.setAttribute("aria-label",c),document.querySelector("#dark-theme-toggle")?.setAttribute("aria-label",u)}a()})();
+
+</script>
+<!--  inline base schema -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "http://localhost:8080#website",
+        "url": "http://localhost:8080",
+        "name": "Brian Baldock",
+        "description": "My personal site, blog and repository of thought",
+        "inLanguage": "en_CA"
+      }
+    ]
+  }
+</script>
+
+<!--  inline blogpost schema  -->
+
+<link rel="stylesheet" href="/assets/css/global.css?4595-9d54-6e74" />
+<!-- preloads -->
+<link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Medium.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Bold.woff2" as="font" type="font/woff2" crossorigin />
+<!-- preloads in page data -->
+<!-- defered js  -->
+
+<!-- masonry fallback, if true in frontmatter -->
+<script src="/assets/scripts/masonry.js?4595-9d54-6e74" defer></script>
+
+
+
+<!-- menu drawer js, if true in meta -->
+<script src="/assets/scripts/nav-drawer.js?4595-9d54-6e74" defer></script>
+
+
+<!-- everything else: meta tags, icons, open graph etc.  -->
+<base href="/blog/" />
+
+<meta name="description" content=" Dive into the latest insights, trends, and musings in technology, design, and creativity. Discover inspiration with every post. #DigitalInsights " />
+
+<meta name="theme-color" content="#353535" />
+<!-- Search Engines -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<!-- Made with Eleventy! -->
+<meta name="generator" content="Eleventy v2.0.1" />
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no" />
+<!-- supports both dark and light color schemes, page author prefers light as default. -->
+<meta name="color-scheme" content="light dark" />
+<!-- activates page transitions -->
+<meta name="view-transition" content="same-origin" />
+
+<!-- Helps prevent duplicate content issues -->
+<link rel="canonical" href="http://localhost:8080/blog/" />
+
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="humans.txt" />
+
+
+
+<!-- Open Graph meta  -->
+<meta property="og:url" content="http://localhost:8080/blog/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Blog" />
+<meta property="og:image" content=" http://localhost:8080/assets/images/template/default-image.webp " />
+<meta property="og:image:alt" content=" Visible content: My personal site, blog and repository of thought " />
+<meta property="og:description" content="Dive into the latest insights, trends, and musings in technology, design, and creativity. Discover inspiration with every post. #DigitalInsights" />
+<meta property="og:site_name" content="Brian Baldock" />
+<meta property="og:locale" content="en_CA" />
+<meta property="article:author" content="Brian Baldock" />
+
+<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed for My Blog: Brian Baldock" href="/feed.xml" />
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed for Tidbits: Brian Baldock" href="/tidbit-feed.xml" />
+
+<!-- Favicon: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+</head>
+
+  <body class="blog">
+    <div id="accessibility" aria-label="accessibility navigation">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <a href="#theme-switcher-label" class="skip-link">Skip to select theme</a>
+</div>
+    <div class="grid" data-layout="site">
+      <header class="site-head">
+  <div class="repel">
+    <a href="/" class="logo | cluster | text-base-light" >
+      <span>Brian Baldock</span>
+    </a>
+  </div>
+</header>
+
+      <div class="site-navigation">
+
+
+  
+
+<nav id="mainnav" class=" site-nav-drawer " aria-label="Main">
+  <ul class="cluster" role="list">
+    
+      <li>
+        <a class="nav" href="/about/" >About</a>
+      </li>
+    
+      <li>
+        <a class="nav" href="/contact/" >Contact</a>
+      </li>
+    
+      <li>
+        <a class="nav" href="/projects/" >Projects</a>
+      </li>
+    
+      <li>
+        <a class="nav" href="/blog/" aria-current="page" data-state="active">Blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <!-- template element holding a button that needs to be injected when JavaScript is finally available. -->
+<!-- based on an article by Manuel Matuzovic, https://web.dev/website-navigation/ -->
+<!-- see also: https://kittygiraudel.com/2022/09/30/templating-in-html/ -->
+
+<template id="burger-template">
+  <button type="button" aria-expanded="false" aria-label="Menu" aria-controls="mainnav">
+    <span>Menu</span>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14" />
+      <path d="M12 5v14" />
+    </svg>
+  </button>
+</template>
+
+
+</div>
+          <section class="site-hero">
+        <div class="hero-blurb">
+            
+            <p>Photo by <a href="https://unsplash.com/@victor_g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Victor</a> on <a href="https://unsplash.com/photos/black-and-white-stripe-textile-iaquA2snPbk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
+            
+        </div>
+        <div class="hero-image">
+            
+            <img id="hero-image" src="/assets/images/template/victor-modern-architecture.webp" alt="The architectural marvel of Messe Basel in Switzerland, featuring a striking center void design. This innovative layout integrates sleek lines, glass, and steel, fostering creativity and seamless flow within the venue's dynamic spaces." />
+            
+        </div>
+    </section>
+      <div class="site-main-spacer" aria-hidden="true"></div>
+      <main id="main" class="flow | site-main">
+<article>
+  <header class="section" style="--spot-color: var(--color-quinary)">
+    <div class="section__inner flow region">
+      <h1 class="text-center text-base-light">Blog</h1>
+    </div>
+    <svg class="seperator" viewBox="0 0 500 50" xmlns="http://www.w3.org/2000/svg" fill="none" preserveAspectRatio="none" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+<title>Illustrated outline of Mount Temple, Alberta, Canada and surrounding mountain range</title>
+    <g transform="matrix(1,0,0,0.988289,0,0)">
+        <path d="M0,0L0,40.5L2.434,39.052L4.545,38.83L6.101,38.83L7.99,37.941L11.879,37.941L14.101,37.275L16.434,37.275L17.545,37.941L19.434,37.83L23.434,38.386L24.99,37.052L26.434,36.386L30.434,35.497L32.879,33.275L34.323,33.275L39.212,35.941L44.101,32.052L46.656,31.275L48.212,32.608L50.545,31.386L51.99,31.83L53.434,31.052L58.212,30.275L61.879,35.164L64.434,35.275L66.434,37.497L74.323,28.497L75.99,28.83L78.767,27.386L82.545,26.719L84.434,27.608L88.656,27.83L93.99,28.164L98.879,31.719L100.99,31.719L102.99,32.608L105.879,32.719L106.99,32.052L108.545,32.275L113.101,34.719L115.212,34.052L117.545,33.275L120.101,30.941L122.434,30.941L124.767,31.83L130.212,34.719L133.767,34.386L135.212,32.83L138.99,31.052L141.656,32.386L144.212,35.275L146.434,37.719L148.656,37.386L151.656,36.052L154.656,34.941L157.545,31.941L160.767,36.164L163.99,36.497L167.879,36.052L172.879,32.719L175.212,34.275L178.323,34.941L180.879,35.275L183.879,33.386L187.212,31.83L188.767,27.941L190.434,26.83L191.879,28.386L192.99,31.497L193.99,28.275L195.434,26.83L195.767,25L197.879,23.608L203.767,21.941L205.545,19.941L210.879,16.941L213.656,14.608L216.101,12.275L218.434,12.608L219.99,13.608L220.323,11.052L222.323,9.83L225.212,9.052L225.545,7.608L234.101,5.608L237.545,5.275L242.99,3.052L245.434,3.275L250,5.719L254.101,8.941L256.323,11.164L271.434,19.052L272.545,21.052L272.99,22.83L274.767,25L275.434,26.608L277.99,26.719L281.99,27.719L284.434,29.941L287.434,31.497L290.434,31.941L293.545,35.83L295.323,38.164L298.879,40.5L300.767,39.164L303.434,37.719L304.767,37.941L307.101,36.386L311.101,36.275L313.323,37.608L315.99,37.719L319.434,34.497L322.656,33.052L325.212,34.164L329.323,36.386L331.99,34.164L335.323,33.608L336.212,32.164L338.212,31.719L339.101,29.719L341.656,28.719L345.323,26.275L347.656,26.497L349.545,26.275L352.323,25L356.656,25L359.323,23.386L361.212,22.719L364.434,21.719L366.767,18.281L369.212,17.17L373.101,18.281L377.323,19.614L381.99,22.947L386.323,23.503L390.879,27.17L392.879,26.947L393.767,25L395.656,23.058L397.99,22.503L400.101,22.836L402.99,22.947L404.656,23.836L407.101,22.725L409.545,20.281L412.101,19.17L415.434,17.503L417.879,17.503L419.99,17.947L422.101,17.836L423.879,16.058L427.767,15.614L430.545,15.503L433.767,12.836L436.434,13.058L440.545,13.281L449.323,15.503L455.879,19.17L461.545,21.503L465.545,25L468.212,22.836L470.879,22.725L473.323,21.058L474.323,19.503L478.212,18.503L481.545,17.725L485.323,17.725L488.767,18.614L490.99,19.614L494.99,18.392L497.434,17.836L500,19.281L500,0L0,0Z"/>
+    </g>
+    <g transform="matrix(0.999227,0,0,0.988289,0,0)">
+        <path d="M258.026,39.13C257.359,39.463 255.364,36.297 254.026,35.13C252.765,34.03 251.278,33.074 250,32.13C248.79,31.236 247.411,30.539 246.359,29.463C245.197,28.275 244.248,25.744 243.026,25C241.887,24.307 240.027,25.881 239.026,25C237.915,24.022 237.633,20.861 236.359,19.13C235.026,17.318 232.804,15.519 231.026,14.13C229.374,12.839 226.359,11.963 225.693,10.797C225.047,9.667 225.961,7.876 227.026,7.13C228.137,6.352 230.599,6.544 232.359,6.13C234.248,5.685 236.351,4.937 238.359,4.463C240.358,3.991 242.467,2.754 244.407,3.286C246.347,3.817 251.359,6.257 250,7.654C244.813,12.985 251.429,17.096 251.429,19.987C251.429,21.725 249.4,23.421 250,25C250.6,26.579 253.688,28.108 255.026,29.463C256.135,30.587 257.558,31.622 258.026,33.13C258.526,34.741 258.693,38.797 258.026,39.13Z" style="opacity:0.4;"/>
+    </g>
+    <g transform="matrix(0.999227,0,0,0.988289,0,0)">
+        <path d="M418.597,50C419.359,49.022 425.097,45.846 427.597,44.13C429.647,42.723 431.907,40.939 433.597,39.701C434.973,38.694 437.74,37.725 437.74,36.701C437.74,35.677 434.788,34.368 433.597,33.558C432.645,32.911 431.508,32.55 430.597,31.844C429.645,31.106 428.691,30.122 427.883,29.13C426.955,27.989 425.978,25.688 425.026,25C424.254,24.442 422.812,25.597 422.169,25C421.526,24.403 421.431,22.37 421.169,21.416C420.973,20.703 420.359,19.892 420.597,19.273C420.835,18.654 421.797,17.981 422.597,17.701C423.621,17.344 425.764,17.225 426.74,17.13C427.309,17.074 428.169,16.773 428.455,17.13C428.74,17.487 428.141,18.631 428.455,19.273C428.978,20.344 430.931,22.32 431.597,23.558C432.112,24.515 431.955,25.892 432.455,26.701C432.935,27.48 433.873,27.857 434.597,28.416C435.431,29.058 436.669,29.773 437.455,30.558C438.202,31.306 438.574,32.582 439.312,33.13C440.026,33.66 441.026,34.081 441.883,33.844C443.955,33.273 449.312,29.916 451.74,29.701C453.571,29.54 454.922,31.544 456.455,32.558C458.074,33.63 460.216,35.273 461.455,36.13C462.247,36.679 464.002,37.177 463.883,37.701C463.764,38.225 461.712,38.619 460.74,39.273C459.431,40.154 457.264,41.987 456.026,42.987C455.106,43.73 454.312,44.892 453.312,45.273C452.312,45.654 450.955,44.749 450.026,45.273C449.097,45.797 448.955,48.201 447.74,48.416C446.526,48.63 443.931,46.987 442.74,46.558C442.032,46.303 441.216,46.177 440.597,45.844C440.001,45.523 439.679,44.737 439.026,44.558C438.24,44.344 436.669,44.844 435.883,44.558C435.155,44.294 435.082,42.755 434.312,42.844C433.288,42.963 431.197,44.349 429.74,45.273C427.859,46.465 424.883,49.212 423.026,50C421.667,50.577 417.835,50.978 418.597,50Z" style="opacity:0.4;"/>
+    </g>
+    <g transform="matrix(0.999227,0,0,0.988289,0,0)">
+        <path d="M466.312,25C466.859,25.643 468.96,26.5 470.169,27.416C471.455,28.39 472.955,29.701 474.026,30.844C475.003,31.886 475.764,33.439 476.597,34.273C477.279,34.955 478.193,35.487 479.026,35.844C479.833,36.19 480.829,35.991 481.597,36.416C482.502,36.916 483.835,38.225 484.455,38.844C484.819,39.208 484.835,39.936 485.312,40.13C485.955,40.392 487.431,40.535 488.312,40.416C489.136,40.304 490.288,39.939 490.597,39.416C490.907,38.892 490.05,37.701 490.169,37.273C490.278,36.881 490.905,36.867 491.312,36.844C492.574,36.773 496.292,36.844 497.74,36.844C498.493,36.844 499.91,37.592 500,36.844C500.377,33.701 500.639,21.154 500,17.987C499.747,16.734 497.284,17.677 496.169,17.844C495.154,17.996 494.145,18.701 493.312,18.987C492.612,19.227 491.901,19.657 491.169,19.558C490.288,19.439 489.131,18.516 488.026,18.273C486.835,18.011 485.362,18.03 484.026,17.987C482.55,17.939 480.502,17.82 479.169,17.987C478.078,18.123 476.907,18.606 476.026,18.987C475.261,19.318 474.502,19.797 473.883,20.273C473.296,20.724 472.901,21.396 472.312,21.844C471.716,22.297 470.978,22.749 470.312,22.987C469.677,23.214 468.883,23.177 468.312,23.273C467.833,23.353 467.216,23.271 466.883,23.558C466.55,23.846 465.976,24.607 466.312,25Z" style="opacity:0.4;"/>
+    </g>
+    <g transform="matrix(0.999227,0,0,0.988289,0,0)">
+        <path d="M432.74,16.416C432.859,17.035 434.399,17.926 435.026,18.844C435.693,19.82 435.835,21.677 436.74,22.273C437.645,22.868 439.22,22.309 440.455,22.416C441.835,22.535 443.716,22.556 445.026,22.987C446.246,23.388 447.335,24.286 448.312,25C449.235,25.676 450.026,26.584 450.883,27.273C451.707,27.935 452.74,28.63 453.455,29.13C454.017,29.524 454.547,29.981 455.169,30.273C455.931,30.63 457.074,31.392 458.026,31.273C458.978,31.154 459.955,30.011 460.883,29.558C461.75,29.136 462.885,29.208 463.597,28.558C464.431,27.799 466.097,25.593 465.883,25C465.669,24.407 463.502,25 462.312,25L457.026,25C456.121,25 455.026,25.502 454.312,25C453.597,24.498 453.455,22.775 452.74,21.987C452.026,21.199 450.879,20.918 450.026,20.273C449.145,19.606 448.24,18.701 447.455,17.987C446.732,17.33 446.068,16.606 445.312,15.987C444.526,15.344 443.526,14.582 442.74,14.13C442.074,13.746 441.288,13.416 440.597,13.273C439.945,13.138 439.264,13.249 438.597,13.273C437.931,13.297 437.211,13.15 436.597,13.416C435.883,13.725 434.955,14.63 434.312,15.13C433.777,15.545 432.621,15.797 432.74,16.416Z" style="opacity:0.4;"/>
+    </g>
+    <g transform="matrix(0.999227,0,0,0.988289,0,0)">
+        <path d="M388.312,35.987C388.121,36.368 388.264,37.439 388.597,37.987C388.931,38.535 389.876,38.707 390.312,39.273C390.788,39.892 391.097,41.011 391.455,41.701C391.758,42.289 392.054,42.889 392.455,43.416C392.907,44.011 393.583,44.667 394.169,45.273C394.859,45.987 395.883,46.913 396.597,47.701C397.259,48.431 397.478,49.867 398.455,50C401.264,50.383 411.288,50.502 413.455,50C414.629,49.728 412.216,47.727 411.455,46.987C410.751,46.304 409.711,46.084 408.883,45.558C407.907,44.939 406.407,43.987 405.597,43.273C404.962,42.712 404.625,41.872 404.026,41.273C403.407,40.654 402.502,40.201 401.883,39.558C401.269,38.92 400.927,38.052 400.312,37.416C399.621,36.701 398.002,35.916 397.74,35.273C397.491,34.66 398.331,34.078 398.74,33.558C399.359,32.773 400.788,31.225 401.455,30.558C401.838,30.175 402.238,29.764 402.74,29.558C403.264,29.344 403.991,29.429 404.597,29.273C405.431,29.058 406.835,28.654 407.74,28.273C408.546,27.933 409.308,27.486 410.026,26.987C410.812,26.442 411.955,25.331 412.455,25C412.613,24.895 413.184,25.106 413.026,25C412.669,24.76 411.193,23.558 410.312,23.558C409.431,23.558 408.621,24.76 407.74,25C406.867,25.238 405.716,24.74 405.026,25C404.366,25.248 404.074,26.084 403.597,26.558C403.143,27.01 402.804,27.761 402.169,27.844C401.264,27.963 399.264,27.082 398.169,27.273C397.154,27.449 396.002,28.201 395.597,28.987C395.193,29.773 395.764,31.249 395.74,31.987C395.725,32.472 395.788,33.063 395.455,33.416C395.05,33.844 393.931,34.297 393.312,34.558C392.812,34.77 392.257,34.822 391.74,34.987C391.145,35.177 390.312,35.535 389.74,35.701C389.274,35.837 388.502,35.606 388.312,35.987Z" style="opacity:0.4;"/>
+    </g>
+    <g transform="matrix(0.999227,0,0,0.988289,0,0)">
+        <path d="M95.74,35.844C95.359,36.13 96.735,36.354 97.169,36.701C97.645,37.082 97.966,37.896 98.597,38.13C99.24,38.368 100.219,38.063 101.026,38.13C101.883,38.201 102.838,38.401 103.74,38.558C104.693,38.725 105.74,39.011 106.74,39.13C107.734,39.248 108.859,39.154 109.74,39.273C110.519,39.378 111.455,39.511 112.026,39.844C112.553,40.151 112.978,40.82 113.169,41.273C113.335,41.668 112.81,42.324 113.169,42.558C113.716,42.916 115.455,43.273 116.455,43.416C117.35,43.544 118.383,43.344 119.169,43.416C119.848,43.477 120.491,43.774 121.169,43.844C121.859,43.916 122.599,43.797 123.312,43.844C124.026,43.892 124.978,44.487 125.455,44.13C125.931,43.773 125.835,42.463 126.169,41.701C126.502,40.939 126.883,40.106 127.455,39.558C128.026,39.011 128.825,38.659 129.597,38.416C130.502,38.13 132.216,38.273 132.883,37.844C133.479,37.461 133.955,36.201 133.597,35.844C133.24,35.487 131.621,36.011 130.74,35.701C129.859,35.392 129.145,34.487 128.312,33.987C127.49,33.494 126.597,33.13 125.74,32.701C124.835,32.249 123.574,31.344 122.883,31.273C122.343,31.217 122.073,32.012 121.597,32.273C120.859,32.677 119.549,33.345 118.455,33.701C117.359,34.058 116.097,34.201 115.026,34.416C114.028,34.615 112.835,34.797 112.026,34.987C111.395,35.135 110.74,35.344 110.169,35.558C109.63,35.76 109.171,36.222 108.597,36.273C107.788,36.344 106.394,36.178 105.312,35.987C104.097,35.773 102.288,35.154 101.312,34.987C100.701,34.883 100.066,34.893 99.455,34.987C98.526,35.13 96.121,35.558 95.74,35.844Z" style="opacity:0.4;"/>
+    </g>
+    <g transform="matrix(0.999227,0,0,0.988289,0,0)">
+        <path d="M31.312,41.416C32.574,41.558 34.097,40.987 35.455,40.987C36.795,40.987 38.12,41.28 39.455,41.416C40.859,41.558 42.403,41.753 43.883,41.844C45.431,41.939 47.122,42.056 48.74,41.987C50.407,41.916 52.335,41.439 53.883,41.416C55.271,41.394 56.74,41.749 58.026,41.844C59.214,41.932 60.645,41.963 61.597,41.987C62.311,42.005 63.169,42.368 63.74,41.987C64.312,41.606 64.883,40.297 65.026,39.701C65.131,39.262 65.031,38.542 64.597,38.416C63.859,38.201 61.693,38.487 60.597,38.416C59.73,38.359 58.889,38.09 58.026,37.987C57.026,37.868 55.645,37.773 54.597,37.701C53.646,37.636 52.687,37.67 51.74,37.558C50.526,37.416 48.383,37.177 47.312,36.844C46.555,36.609 46.002,35.773 45.312,35.558C44.629,35.347 43.74,35.392 43.169,35.558C42.648,35.71 42.026,36.058 41.883,36.558C41.74,37.058 42.669,38.558 42.312,38.558C41.955,38.558 40.621,36.963 39.74,36.558C38.908,36.176 37.812,36.32 37.026,36.13C36.338,35.963 35.359,35.249 35.026,35.416C34.693,35.582 35.401,36.699 35.026,37.13C34.55,37.677 33.145,38.368 32.169,38.701C31.213,39.028 29.883,38.892 29.169,39.13C28.654,39.302 27.526,39.749 27.883,40.13C28.24,40.511 30.099,41.278 31.312,41.416Z" style="opacity:0.4;"/>
+    </g>
+    <g transform="matrix(0.999227,0,0,0.988289,0,0)">
+        <path d="M18.74,43.558C19.478,44.249 20.074,45.297 20.883,45.844C21.682,46.384 22.812,46.63 23.597,46.844C24.247,47.021 24.978,47.011 25.597,47.13C26.176,47.241 26.931,47.109 27.312,47.558C27.716,48.037 27.214,49.756 28.026,50C29.383,50.407 34.478,50.288 35.455,50C36.201,49.78 34.451,48.805 33.883,48.273C33.169,47.604 32.05,46.416 31.169,45.987C30.393,45.61 29.42,45.96 28.597,45.701C27.764,45.439 26.883,44.868 26.169,44.416C25.509,43.998 24.764,43.535 24.312,42.987C23.877,42.461 23.764,41.654 23.455,41.13C23.178,40.662 22.943,40.081 22.455,39.844C21.716,39.487 19.931,39.082 19.026,38.987C18.356,38.917 17.663,39.053 17.026,39.273C16.335,39.511 14.978,40.011 14.883,40.416C14.788,40.82 15.93,41.274 16.455,41.701C17.097,42.225 18.023,42.888 18.74,43.558Z" style="opacity:0.4;"/>
+    </g>
+</svg>
+
+  </header>
+
+  <div class="region flow prose">
+    <p>Welcome to my digital domain, where tech meets creativity and curiosity thrives. Join me on this journey through the digital landscape—a true geek at heart.</p>
+
+  </div>
+
+  <ul class="blogcards | grid" role="list" data-rows="masonry" data-layout="50-50">
+    <!-- loop posts -->
+    
+    
+      <!-- activate tags -->
+      
+      <!-- set date context -->
+      
+      <!-- set heading context -->
+      
+      <!-- include card -->
+      <li class="card">
+  <div class="flow">
+    
+      <h2>
+        <a href="/blog/new-site/">New Site</a>
+      </h2>
+    
+    <div class="cluster">
+      <span class="text-step-min-1">
+        
+        <time datetime="2024-03-30T00:00:00.000Z">
+  March 29, 2024
+</time>
+
+        
+          <span class="button post-tag"> portfolio </span>
+        
+      </span>
+    </div>
+    <p>First post on the new site.</p>
+  </div>
+</li>
+
+    
+  </ul>
+
+  <!-- set collection to paginate -->
+  
+  <!-- set target pagination settings in meta.js -->
+  
+  <!-- if the number of items in the collection is greater than the number of items shown on one page -->
+  
+</article>
+</main>
+      <div class="site-main-spacer" aria-hidden="true"></div>
+      <div class="site-logo-spacer" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 783 2159"><title>BDock Solutions</title><path fill="#f7f7f780" d="M391.454 782.908 0 391.454 391.454 0l391.454 391.454-391.454 391.454Zm-163.516-554.97V554.97H554.97V227.938H227.938Z"/><path fill="#f7f7f780" fill-rule="nonzero" d="M579.722 2145.638v-99.466c0-36.267-20.267-62.133-49.6-62.133-20 0-37.333 12.533-46.667 33.866-8-16-22.666-25.6-40.8-25.6-26.666 0-46.133 23.734-46.133 57.6v95.733h183.2Zm-110.667-45.333H435.19v-39.466c0-12.534 6.933-21.6 16.8-21.6 9.866 0 17.066 9.066 17.066 21.6v39.466Zm72 0h-36.8v-46.133c0-13.6 7.734-23.2 18.4-23.2 10.667 0 18.4 9.6 18.4 23.2v46.133ZM579.722 1967.505v-66.933c0-62.933-38.133-107.466-91.733-107.466s-91.467 44.533-91.467 107.466v66.933h183.2Zm-41.333-45.6H437.856v-28.266c0-31.467 20.8-53.6 50.133-53.6 29.333 0 50.4 22.133 50.4 53.6v28.266ZM582.922 1682.44c0-53.334-43.467-98.4-94.933-98.4-51.467 0-94.667 45.066-94.667 98.4 0 53.6 43.2 98.666 94.667 98.666 51.466 0 94.933-45.067 94.933-98.667Zm-41.333 0c0 28-24.534 51.732-53.6 51.732-28.8 0-53.333-23.733-53.333-51.733 0-28 24.533-51.466 53.333-51.466 29.066 0 53.6 23.466 53.6 51.466ZM582.922 1472.84c0-28.534-12.267-54.4-31.733-72.534l-29.334 33.067c12 9.6 19.734 23.733 19.734 39.467 0 28-24.534 51.733-53.6 51.733-28.8 0-53.333-23.734-53.333-51.733 0-15.467 7.733-29.867 19.733-39.2l-29.6-33.334c-19.2 18.134-31.467 44-31.467 72.534 0 53.6 43.2 98.666 94.667 98.666 51.466 0 94.933-45.067 94.933-98.666ZM579.722 1386.706v-45.6h-49.867l-22.666-20.8 72.533-51.733v-54.933l-105.333 74.933-77.867-69.6v54.4l78.133 67.733h-78.133v45.6h183.2ZM782.922 2073.905c0-45.333-22.934-73.333-59.734-73.333-34.4 0-46.133 26.4-54.933 67.467-5.867 27.2-9.6 36-20.8 36-9.066 0-16-8.267-16-22.934 0-17.066 6.667-35.466 19.467-52.266l-32.533-23.2c-16 19.466-25.067 43.466-25.067 74.4 0 41.6 23.467 69.866 58.667 69.866 36.8 0 47.466-29.067 56.266-68.266 6.4-26.667 8.8-35.2 19.733-35.2 9.867 0 16.8 8.8 16.8 25.866 0 22.4-8.533 42.4-23.2 60.267l30.667 25.866c20-22.4 30.667-52 30.667-84.533ZM782.922 1892.839c0-53.333-43.467-98.4-94.934-98.4-51.466 0-94.666 45.067-94.666 98.4 0 53.6 43.2 98.666 94.666 98.666 51.467 0 94.934-45.066 94.934-98.666Zm-41.334 0c0 28-24.533 51.733-53.6 51.733-28.8 0-53.333-23.733-53.333-51.733 0-28 24.534-51.467 53.333-51.467 29.067 0 53.6 23.467 53.6 51.467ZM738.922 1734.44h-142.4v45.599h183.2v-133.866h-40.8v88.266ZM782.922 1553.373c0-50.134-34.4-85.067-83.467-85.067H596.522v45.333h100.8c25.866 0 44.266 16.534 44.266 39.734 0 22.933-18.4 39.466-44.266 39.466h-100.8v45.6h102.933c49.067 0 83.467-35.2 83.467-85.066ZM779.722 1386.173v-45.6h-142.4v-55.733h-40.8v156.8h40.8v-55.467h142.4ZM596.522 1257.107v-45.6h183.2v45.6zM782.922 1098.707c0-53.333-43.467-98.4-94.934-98.4-51.466 0-94.666 45.067-94.666 98.4 0 53.6 43.2 98.666 94.666 98.666 51.467 0 94.934-45.066 94.934-98.666Zm-41.334 0c0 28-24.533 51.733-53.6 51.733-28.8 0-53.333-23.733-53.333-51.733 0-28 24.534-51.467 53.333-51.467 29.067 0 53.6 23.467 53.6 51.467ZM779.722 988.574v-45.6H671.455l108.267-80V817.64h-183.2v45.333h108.266l-108.266 80v45.6h183.2ZM782.922 724.301c0-45.333-22.934-73.333-59.734-73.333-34.4 0-46.133 26.4-54.933 67.466-5.867 27.2-9.6 36-20.8 36-9.066 0-16-8.266-16-22.933 0-17.067 6.667-35.466 19.467-52.266l-32.533-23.2c-16 19.466-25.067 43.466-25.067 74.4 0 41.6 23.467 69.866 58.667 69.866 36.8 0 47.466-29.067 56.266-68.267 6.4-26.666 8.8-35.2 19.733-35.2 9.867 0 16.8 8.8 16.8 25.867 0 22.4-8.533 42.4-23.2 60.267l30.667 25.866c20-22.4 30.667-52 30.667-84.533Z"/></svg>
+      </div>
+      <div class="site-footer-spacer" aria-hidden="true"></div>
+      <footer class="site-foot" id="footer">
+    <div class="site-foot__inner">
+      <nav class="site-foot__inner text-step-0" aria-label="Complementary">
+        &copy; 2024
+        <a href="/" >
+          Brian Baldock
+        </a>
+
+        
+          <a href="/credits/" >Credits</a>
+        
+          <a href="/tidbits/" >Tidbits</a>
+        
+          <a href="/styleguide/" >Style guide</a>
+        
+      </nav>
+
+      <nav class="site-foot__inner" aria-label="Platforms">
+        <!-- gets the first item from the feed loop set in meta -->
+        <a href="/feed.xml" rel="alternate" type="application/atom+xml">
+          <span class="visually-hidden">Atom Feed for My Blog</span>
+          <div aria-hidden="true"><svg role="img" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="" xmlns="http://www.w3.org/2000/svg"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg>
+</div>
+        </a>
+
+        
+          
+            <!-- regular platforms -->
+            <a href="https://github.com/Midknight" rel="me">
+              <span class="visually-hidden">Github</span>
+              <div aria-hidden="true">
+                <svg role="img" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </div>
+            </a>
+          
+        
+          
+            <!-- regular platforms -->
+            <a href="https://www.linkedin.com/in/brian-baldock/" rel="me">
+              <span class="visually-hidden">Linkedin</span>
+              <div aria-hidden="true">
+                <svg role="img" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="" xmlns="http://www.w3.org/2000/svg">
+  <title>LinkedIn</title>
+  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+</svg>
+
+              </div>
+            </a>
+          
+        
+          
+            <!-- regular platforms -->
+            <a href="https://fosstodon.org/@midknight" rel="me">
+              <span class="visually-hidden">Mastodon</span>
+              <div aria-hidden="true">
+                <svg role="img" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="" xmlns="http://www.w3.org/2000/svg"><title>Mastodon</title><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/></svg>
+              </div>
+            </a>
+          
+        
+          
+            <!-- regular platforms -->
+            <a href="https://www.buymeacoffee.com/bdock" rel="me">
+              <span class="visually-hidden">Buymeacoffee</span>
+              <div aria-hidden="true">
+                <svg role="img" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" stroke="" xmlns="http://www.w3.org/2000/svg"><title>Buy Me A Coffee</title><path d="M20.216 6.415l-.132-.666c-.119-.598-.388-1.163-1.001-1.379-.197-.069-.42-.098-.57-.241-.152-.143-.196-.366-.231-.572-.065-.378-.125-.756-.192-1.133-.057-.325-.102-.69-.25-.987-.195-.4-.597-.634-.996-.788a5.723 5.723 0 00-.626-.194c-1-.263-2.05-.36-3.077-.416a25.834 25.834 0 00-3.7.062c-.915.083-1.88.184-2.75.5-.318.116-.646.256-.888.501-.297.302-.393.77-.177 1.146.154.267.415.456.692.58.36.162.737.284 1.123.366 1.075.238 2.189.331 3.287.37 1.218.05 2.437.01 3.65-.118.299-.033.598-.073.896-.119.352-.054.578-.513.474-.834-.124-.383-.457-.531-.834-.473-.466.074-.96.108-1.382.146-1.177.08-2.358.082-3.536.006a22.228 22.228 0 01-1.157-.107c-.086-.01-.18-.025-.258-.036-.243-.036-.484-.08-.724-.13-.111-.027-.111-.185 0-.212h.005c.277-.06.557-.108.838-.147h.002c.131-.009.263-.032.394-.048a25.076 25.076 0 013.426-.12c.674.019 1.347.067 2.017.144l.228.031c.267.04.533.088.798.145.392.085.895.113 1.07.542.055.137.08.288.111.431l.319 1.484a.237.237 0 01-.199.284h-.003c-.037.006-.075.01-.112.015a36.704 36.704 0 01-4.743.295 37.059 37.059 0 01-4.699-.304c-.14-.017-.293-.042-.417-.06-.326-.048-.649-.108-.973-.161-.393-.065-.768-.032-1.123.161-.29.16-.527.404-.675.701-.154.316-.199.66-.267 1-.069.34-.176.707-.135 1.056.087.753.613 1.365 1.37 1.502a39.69 39.69 0 0011.343.376.483.483 0 01.535.53l-.071.697-1.018 9.907c-.041.41-.047.832-.125 1.237-.122.637-.553 1.028-1.182 1.171-.577.131-1.165.2-1.756.205-.656.004-1.31-.025-1.966-.022-.699.004-1.556-.06-2.095-.58-.475-.458-.54-1.174-.605-1.793l-.731-7.013-.322-3.094c-.037-.351-.286-.695-.678-.678-.336.015-.718.3-.678.679l.228 2.185.949 9.112c.147 1.344 1.174 2.068 2.446 2.272.742.12 1.503.144 2.257.156.966.016 1.942.053 2.892-.122 1.408-.258 2.465-1.198 2.616-2.657.34-3.332.683-6.663 1.024-9.995l.215-2.087a.484.484 0 01.39-.426c.402-.078.787-.212 1.074-.518.455-.488.546-1.124.385-1.766zm-1.478.772c-.145.137-.363.201-.578.233-2.416.359-4.866.54-7.308.46-1.748-.06-3.477-.254-5.207-.498-.17-.024-.353-.055-.47-.18-.22-.236-.111-.71-.054-.995.052-.26.152-.609.463-.646.484-.057 1.046.148 1.526.22.577.088 1.156.159 1.737.212 2.48.226 5.002.19 7.472-.14.45-.06.899-.13 1.345-.21.399-.072.84-.206 1.08.206.166.281.188.657.162.974a.544.544 0 01-.169.364zm-6.159 3.9c-.862.37-1.84.788-3.109.788a5.884 5.884 0 01-1.569-.217l.877 9.004c.065.78.717 1.38 1.5 1.38 0 0 1.243.065 1.658.065.447 0 1.786-.065 1.786-.065.783 0 1.434-.6 1.499-1.38l.94-9.95a3.996 3.996 0 00-1.322-.238c-.826 0-1.491.284-2.26.613z"/></svg>
+              </div>
+            </a>
+          
+        
+      </nav>
+    </div>
+
+    <!-- theme switch -->
+    <div role="region" class="theme-switch | cluster mt-xs" style="--cluster-horizontal-alignment: center; --gutter: 0.5rem" aria-labelledby="theme-switcher-label" data-theme-switcher hidden>
+  <h2 id="theme-switcher-label">Theme</h2>
+  <button class="button" id="light-theme-toggle" data-theme="light">
+    <span>light</span>
+  </button>
+  <button class="button" id="dark-theme-toggle" data-theme="dark">
+    <span>dark</span>
+  </button>
+</div>
+
+</footer>
+
+      <div class="site-spacer" aria-hidden="true"></div>
+    </div>
+    <!-- back to top link -->
+    <div class="back-to-top-link-wrapper" role="navigation">
+    <a href="#accessibility" class="back-to-top-link" aria-label="Scroll to Top of Page">
+        <svg width="1em" height="1em" id="caret" fill="currentColor" viewBox="0 0 98.148 98.149" xmlns="http://www.w3.org/2000/svg">
+    <title>Go to the top of the page.</title>
+    <path d="M97.562 64.692 50.49 17.618c-.75-.75-2.078-.75-2.828 0L.586 64.693a2 2 0 0 0 0 2.827l12.987 12.987c.391.391.902.586 1.414.586.512 0 1.023-.195 1.414-.586l32.674-32.674L81.75 80.506c.75.751 2.078.75 2.828 0l12.984-12.987a1.997 1.997 0 0 0 0-2.827z" />
+</svg>
+    </a>
+</div>
+
+<script>
+    const stickyElement = document.querySelector('#caret');
+    const stickyElementContainer = document.querySelector('.back-to-top-link-wrapper');
+    const targetRegion = document.querySelector('#footer');
+    let currentTheme = document.querySelector('html').dataset.theme;    
+    let targetRegionPosition = targetRegion.getBoundingClientRect().top + window.pageYOffset;
+    let stickyElementPosition = stickyElement.getBoundingClientRect().top;
+
+    function updatePositionsAndDimensions() {
+        targetRegionPosition = targetRegion.getBoundingClientRect().top + window.pageYOffset;
+        stickyElementPosition = stickyElement.getBoundingClientRect().top;
+        currentTheme = document.querySelector('html').dataset.theme;
+    }
+
+    function stickyScroll() {
+        const scrollPosition = window.scrollY + stickyElementPosition;
+        if (currentTheme == 'light') {
+            if (scrollPosition > targetRegionPosition) {
+                stickyElement.style.fill = 'var(--color-base-light)';
+                stickyElementContainer.style.color = 'var(--color-base-light)';
+            } else {
+                stickyElement.style.fill = 'var(--color-text)';
+                stickyElementContainer.style.color = 'var(--color-text)';
+            }
+        }
+    }
+
+    window.addEventListener('scroll', stickyScroll);
+    window.addEventListener('resize', () => {
+        updatePositionsAndDimensions();
+    });
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        currentTheme = event.matches ? "dark" : "light";
+    });
+
+
+</script>
+  </body>
+</html>

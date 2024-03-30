@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+Developer: Brian Baldock
+Contact: bbaldock04@hotmail.com
+Site: https://www.brianbaldock.com
+
+Find me on: https://fosstodon.org/@midknight
+
+/* SITE */
+Doctype: HTML5, CSS, JavaScript, 11ty

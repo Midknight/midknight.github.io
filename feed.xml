@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="assets/css/feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="http://localhost:8080/">
+  <title>Brian Baldock</title>
+  <subtitle>This blog will have numerous amounts of subject matter that I think about and try to master</subtitle>
+  <link href="http://localhost:8080/feed.xml" rel="self" />
+  <link href="http://localhost:8080/" />
+  
+  <updated>2024-03-30T00:00:00Z</updated>
+  <id>http://localhost:8080/</id>
+  <author>
+    <name>Brian Baldock</name>
+    <email>bbaldock04@hotmail.com</email>
+  </author>
+  <entry>
+    <title>New Site</title>
+    <link href="http://localhost:8080/blog/new-site/" />
+    <updated>2024-03-30T00:00:00Z</updated>
+    <id>http://localhost:8080/blog/new-site/</id>
+    <content xml:lang="" type="html">&lt;p&gt;It’s been awhile since I dedicated time to working on my own site. In fact, it’s lingered on the backburner for so long that the concept of having my own corner of the web faded into something of an anxious shadow, following me for what feels like ages. But thanks to my incredible wife’s unwavering support, I’ve finally summoned the courage to chase down that shadow and bring my vision to life. And here it is—my website, finally up and running. It’s a small victory, but an important one. Now, with this virtual canvas at my fingertips, I suppose I better roll up my sleeves and get cracking! Here’s to new beginnings and the exciting journey ahead.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
