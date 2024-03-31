@@ -43,7 +43,7 @@
 
 		<!-- sitename / url -->
 		<text font-family="&#39;Clarity City&#39;, Ubuntu, sans-serif" font-size="24" font-weight="500" fill="#F2F2D9" letter-spacing="-0.5">
-			<!-- <tspan x="160" y="580">Brian Baldock · localhost:8080</tspan> -->
+			<!-- <tspan x="160" y="580">Brian Baldock · www.brianbaldock.com</tspan> -->
 			<tspan x="160" y="580">Brian Baldock — www.brianbaldock.com</tspan>
 		</text>
 </svg>

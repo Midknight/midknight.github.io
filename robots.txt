@@ -34,4 +34,4 @@ Disallow: /
 User-agent: baiduspider-video
 Disallow: /
 
-Sitemap: http://localhost:8080/sitemap.xml
+Sitemap: https://www.brianbaldock.com/sitemap.xml

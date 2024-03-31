@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="assets/css/feed.xsl" type="text/xsl"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="http://localhost:8080/">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://www.brianbaldock.com/">
   <title> Tidbit</title>
   <subtitle></subtitle>
-  <link href="http://localhost:8080/tidbit-feed.xml" rel="self" />
-  <link href="http://localhost:8080/" />
+  <link href="https://www.brianbaldock.com/tidbit-feed.xml" rel="self" />
+  <link href="https://www.brianbaldock.com/" />
   
   <updated>2024-03-27T00:00:00Z</updated>
-  <id>http://localhost:8080/</id>
+  <id>https://www.brianbaldock.com/</id>
   <author>
     <name>Brian Baldock</name>
     <email>bbaldock04@hotmail.com</email>
   </author>
   <entry>
     <title>HTML Characters</title>
-    <link href="http://localhost:8080/tidbits/html-characters/" />
+    <link href="https://www.brianbaldock.com/tidbits/html-characters/" />
     <updated>2024-03-27T00:00:00Z</updated>
-    <id>http://localhost:8080/tidbits/html-characters/</id>
+    <id>https://www.brianbaldock.com/tidbits/html-characters/</id>
     <content xml:lang="" type="html">&lt;style&gt;
     th:nth-child(1) {
         width: 10%;
@@ -38,22 +38,22 @@
     }
 &lt;/style&gt;
 &lt;ul class=&quot;list&quot;&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#general&quot;&gt;General&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#accents&quot;&gt;Accents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#letter-a-accents&quot;&gt;Letter A Accents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#letter-e-accents&quot;&gt;Letter E Accents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#letter-i-accents&quot;&gt;Letter I Accents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#letter-o-accents&quot;&gt;Letter O Accents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#letter-u-accents&quot;&gt;Letter U Accents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#additional-accents&quot;&gt;Additional Accents&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#quotes-and-punctuation&quot;&gt;Quotes and Punctuation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#slashes-and-brackets&quot;&gt;Slashes and Brackets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#money-and-math-symbols&quot;&gt;Money and Math Symbols&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#uppercase-letters&quot;&gt;Uppercase Letters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#lowercase-letters&quot;&gt;Lowercase-Letters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost:8080/tidbits/html-characters/#numbers&quot;&gt;Numbers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#general&quot;&gt;General&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#accents&quot;&gt;Accents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-a-accents&quot;&gt;Letter A Accents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-e-accents&quot;&gt;Letter E Accents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-i-accents&quot;&gt;Letter I Accents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-o-accents&quot;&gt;Letter O Accents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-u-accents&quot;&gt;Letter U Accents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#additional-accents&quot;&gt;Additional Accents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#quotes-and-punctuation&quot;&gt;Quotes and Punctuation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#slashes-and-brackets&quot;&gt;Slashes and Brackets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#money-and-math-symbols&quot;&gt;Money and Math Symbols&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#uppercase-letters&quot;&gt;Uppercase Letters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#lowercase-letters&quot;&gt;Lowercase-Letters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#numbers&quot;&gt;Numbers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;general&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#general&quot;&gt;General&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;general&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#general&quot;&gt;General&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -198,7 +198,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#accents&quot;&gt;Accents&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#accents&quot;&gt;Accents&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -259,7 +259,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;letter-a-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#letter-a-accents&quot;&gt;Letter A Accents&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;letter-a-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-a-accents&quot;&gt;Letter A Accents&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -344,7 +344,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;letter-e-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#letter-e-accents&quot;&gt;Letter E Accents&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;letter-e-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-e-accents&quot;&gt;Letter E Accents&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -405,7 +405,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;letter-i-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#letter-i-accents&quot;&gt;Letter I Accents&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;letter-i-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-i-accents&quot;&gt;Letter I Accents&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -466,7 +466,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;letter-o-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#letter-o-accents&quot;&gt;Letter O Accents&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;letter-o-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-o-accents&quot;&gt;Letter O Accents&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -539,7 +539,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;letter-u-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#letter-u-accents&quot;&gt;Letter U Accents&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;letter-u-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#letter-u-accents&quot;&gt;Letter U Accents&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -600,7 +600,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;additional-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#additional-accents&quot;&gt;Additional Accents&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;additional-accents&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#additional-accents&quot;&gt;Additional Accents&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -697,7 +697,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;quotes-and-punctuation&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#quotes-and-punctuation&quot;&gt;Quotes and Punctuation&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;quotes-and-punctuation&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#quotes-and-punctuation&quot;&gt;Quotes and Punctuation&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -896,7 +896,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;slashes-and-brackets&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#slashes-and-brackets&quot;&gt;Slashes and Brackets&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;slashes-and-brackets&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#slashes-and-brackets&quot;&gt;Slashes and Brackets&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -969,7 +969,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;money-and-math-symbols&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#money-and-math-symbols&quot;&gt;Money and Math Symbols&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;money-and-math-symbols&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#money-and-math-symbols&quot;&gt;Money and Math Symbols&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1102,7 +1102,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;uppercase-letters&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#uppercase-letters&quot;&gt;Uppercase Letters&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;uppercase-letters&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#uppercase-letters&quot;&gt;Uppercase Letters&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1271,7 +1271,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;lowercase-letters&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#lowercase-letters&quot;&gt;Lowercase Letters&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;lowercase-letters&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#lowercase-letters&quot;&gt;Lowercase Letters&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1440,7 +1440,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;numbers&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;http://localhost:8080/tidbits/html-characters/#numbers&quot;&gt;Numbers&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;numbers&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/html-characters/#numbers&quot;&gt;Numbers&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1517,9 +1517,9 @@
   </entry>
   <entry>
     <title>Conversion Chart</title>
-    <link href="http://localhost:8080/tidbits/conversion-chart/" />
+    <link href="https://www.brianbaldock.com/tidbits/conversion-chart/" />
     <updated>2024-03-26T00:00:00Z</updated>
-    <id>http://localhost:8080/tidbits/conversion-chart/</id>
+    <id>https://www.brianbaldock.com/tidbits/conversion-chart/</id>
     <content xml:lang="" type="html">&lt;style&gt;
     table {
         position: relative;
@@ -1998,9 +1998,9 @@
   </entry>
   <entry>
     <title>Business Card Sizes</title>
-    <link href="http://localhost:8080/tidbits/business-card-sizes/" />
+    <link href="https://www.brianbaldock.com/tidbits/business-card-sizes/" />
     <updated>2024-03-26T00:00:00Z</updated>
-    <id>http://localhost:8080/tidbits/business-card-sizes/</id>
+    <id>https://www.brianbaldock.com/tidbits/business-card-sizes/</id>
     <content xml:lang="" type="html">&lt;table&gt;
     &lt;thead&gt;
     &lt;tr&gt;
