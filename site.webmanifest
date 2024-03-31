@@ -1,7 +1,7 @@
 {
   "name": "Brian Baldock - My personal site, blog and repository of thought",
   "short_name": "Brian Baldock",
-  "start_url": "http://localhost:8080",
+  "start_url": "https://www.brianbaldock.com",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
