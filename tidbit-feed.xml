@@ -6,18 +6,409 @@
   <link href="https://www.brianbaldock.com/tidbit-feed.xml" rel="self" />
   <link href="https://www.brianbaldock.com/" />
   
-  <updated>2024-03-27T00:00:00Z</updated>
+  <updated>2024-04-25T00:00:00Z</updated>
   <id>https://www.brianbaldock.com/</id>
   <author>
     <name>Brian Baldock</name>
     <email>bbaldock04@hotmail.com</email>
   </author>
   <entry>
+    <title>Pitch Conversions</title>
+    <link href="https://www.brianbaldock.com/tidbits/pitch-conversions/" />
+    <updated>2024-04-25T00:00:00Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/pitch-conversions/</id>
+    <content xml:lang="" type="html">&lt;style&gt;
+    table {
+        position: relative;
+    }
+    thead th {
+        background-color: var(--color-bg);
+        position: sticky;
+        top: 0;
+    }
+    tbody &gt; tr:nth-child(odd) {
+        background-color: var(--color-bg-accent);
+    }
+&lt;/style&gt;
+&lt;p&gt;I was working on a home repair project and the item I needed to replicate shattered. I was able to cobble together rough dimensions and possible thread pitch but needed to do multiple iterations of the model to print test. Thanks to Newman Tools&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/pitch-conversions/#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; I was able to zero in on a possible pitch.&lt;/p&gt;
+&lt;h3 id=&quot;threads-per-inch-pitch-in-inches-and-pitch-in-mm&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/pitch-conversions/#threads-per-inch-pitch-in-inches-and-pitch-in-mm&quot;&gt;Threads per Inch, Pitch in Inches and Pitch in mm&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Threads per inch&lt;/th&gt;
+&lt;th&gt;Pitch in inches&lt;/th&gt;
+&lt;th&gt;Pitch in mm&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;127&lt;/td&gt;
+&lt;td&gt;0.00787&lt;/td&gt;
+&lt;td&gt;0.200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;120&lt;/td&gt;
+&lt;td&gt;0.00833&lt;/td&gt;
+&lt;td&gt;0.212&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;112&lt;/td&gt;
+&lt;td&gt;0.00893&lt;/td&gt;
+&lt;td&gt;0.227&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;101.6&lt;/td&gt;
+&lt;td&gt;0.00984&lt;/td&gt;
+&lt;td&gt;0.250&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;0.01000&lt;/td&gt;
+&lt;td&gt;0.254&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;96&lt;/td&gt;
+&lt;td&gt;0.01042&lt;/td&gt;
+&lt;td&gt;0.265&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;td&gt;0.01111&lt;/td&gt;
+&lt;td&gt;0.282&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;84.67&lt;/td&gt;
+&lt;td&gt;0.01181&lt;/td&gt;
+&lt;td&gt;0.300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;80&lt;/td&gt;
+&lt;td&gt;0.01250&lt;/td&gt;
+&lt;td&gt;0.318&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;72.57&lt;/td&gt;
+&lt;td&gt;0.01378&lt;/td&gt;
+&lt;td&gt;0.350&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;72&lt;/td&gt;
+&lt;td&gt;0.01389&lt;/td&gt;
+&lt;td&gt;0.353&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;td&gt;0.01563&lt;/td&gt;
+&lt;td&gt;0.397&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;63.5&lt;/td&gt;
+&lt;td&gt;0.01575&lt;/td&gt;
+&lt;td&gt;0.400&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;td&gt;0.01667&lt;/td&gt;
+&lt;td&gt;0.423&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;56.44&lt;/td&gt;
+&lt;td&gt;0.01772&lt;/td&gt;
+&lt;td&gt;0.450&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;56&lt;/td&gt;
+&lt;td&gt;0.01786&lt;/td&gt;
+&lt;td&gt;0.454&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50.8&lt;/td&gt;
+&lt;td&gt;0.01969&lt;/td&gt;
+&lt;td&gt;0.500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;0.02083&lt;/td&gt;
+&lt;td&gt;0.529&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;0.02273&lt;/td&gt;
+&lt;td&gt;0.577&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;42.33&lt;/td&gt;
+&lt;td&gt;0.02362&lt;/td&gt;
+&lt;td&gt;0.600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;0.02500&lt;/td&gt;
+&lt;td&gt;0.635&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36.29&lt;/td&gt;
+&lt;td&gt;0.02756&lt;/td&gt;
+&lt;td&gt;0.700&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;0.02778&lt;/td&gt;
+&lt;td&gt;0.706&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;0.02941&lt;/td&gt;
+&lt;td&gt;0.747&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33.87&lt;/td&gt;
+&lt;td&gt;0.02952&lt;/td&gt;
+&lt;td&gt;0.750&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;0.03125&lt;/td&gt;
+&lt;td&gt;0.794&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31.75&lt;/td&gt;
+&lt;td&gt;0.03150&lt;/td&gt;
+&lt;td&gt;0.800&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;0.03333&lt;/td&gt;
+&lt;td&gt;0.847&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28.22&lt;/td&gt;
+&lt;td&gt;0.03544&lt;/td&gt;
+&lt;td&gt;0.900&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;0.03571&lt;/td&gt;
+&lt;td&gt;0.907&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;0.03704&lt;/td&gt;
+&lt;td&gt;0.941&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;0.03846&lt;/td&gt;
+&lt;td&gt;0.977&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25.4&lt;/td&gt;
+&lt;td&gt;0.03937&lt;/td&gt;
+&lt;td&gt;1.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;0.04167&lt;/td&gt;
+&lt;td&gt;1.058&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;0.04545&lt;/td&gt;
+&lt;td&gt;1.155&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20.32&lt;/td&gt;
+&lt;td&gt;0.04921&lt;/td&gt;
+&lt;td&gt;1.250&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;0.05000&lt;/td&gt;
+&lt;td&gt;1.270&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;0.05263&lt;/td&gt;
+&lt;td&gt;1.337&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;0.05556&lt;/td&gt;
+&lt;td&gt;1.411&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16.93&lt;/td&gt;
+&lt;td&gt;0.05907&lt;/td&gt;
+&lt;td&gt;1.500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;0.06250&lt;/td&gt;
+&lt;td&gt;1.588&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14.51&lt;/td&gt;
+&lt;td&gt;0.06892&lt;/td&gt;
+&lt;td&gt;1.751&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;0.07143&lt;/td&gt;
+&lt;td&gt;1.814&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;0.07692&lt;/td&gt;
+&lt;td&gt;1.954&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12.7&lt;/td&gt;
+&lt;td&gt;0.07874&lt;/td&gt;
+&lt;td&gt;2.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;0.08333&lt;/td&gt;
+&lt;td&gt;2.117&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11.50&lt;/td&gt;
+&lt;td&gt;0.08696&lt;/td&gt;
+&lt;td&gt;2.209&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;0.09091&lt;/td&gt;
+&lt;td&gt;2.309&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.16&lt;/td&gt;
+&lt;td&gt;0.09843&lt;/td&gt;
+&lt;td&gt;2.500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;0.10000&lt;/td&gt;
+&lt;td&gt;2.540&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;0.11111&lt;/td&gt;
+&lt;td&gt;2.822&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8.47&lt;/td&gt;
+&lt;td&gt;0.11806&lt;/td&gt;
+&lt;td&gt;2.999&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;0.12500&lt;/td&gt;
+&lt;td&gt;3.175&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7.26&lt;/td&gt;
+&lt;td&gt;0.13774&lt;/td&gt;
+&lt;td&gt;3.499&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;0.14286&lt;/td&gt;
+&lt;td&gt;3.629&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6.35&lt;/td&gt;
+&lt;td&gt;0.15748&lt;/td&gt;
+&lt;td&gt;4.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;0.16667&lt;/td&gt;
+&lt;td&gt;4.233&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5.64&lt;/td&gt;
+&lt;td&gt;0.17730&lt;/td&gt;
+&lt;td&gt;4.504&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5.08&lt;/td&gt;
+&lt;td&gt;0.19685&lt;/td&gt;
+&lt;td&gt;5.000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;0.20000&lt;/td&gt;
+&lt;td&gt;5.080&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4.62&lt;/td&gt;
+&lt;td&gt;0.21645&lt;/td&gt;
+&lt;td&gt;5.498&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4.5&lt;/td&gt;
+&lt;td&gt;0.22222&lt;/td&gt;
+&lt;td&gt;5.644&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4.23&lt;/td&gt;
+&lt;td&gt;0.23641&lt;/td&gt;
+&lt;td&gt;6.005&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;0.25000&lt;/td&gt;
+&lt;td&gt;6.350&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;0.33333&lt;/td&gt;
+&lt;td&gt;8.467&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0.50000&lt;/td&gt;
+&lt;td&gt;12.700&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr class=&quot;footnotes-sep&quot; /&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Original pitch data scraped from &lt;a href=&quot;https://www.newmantools.com/tech/pitchconversions.htm&quot; rel=&quot;noopener&quot;&gt;Newman Tools&lt;/a&gt; &lt;a href=&quot;https://www.brianbaldock.com/tidbits/pitch-conversions/#fnref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Helpful Tools</title>
+    <link href="https://www.brianbaldock.com/tidbits/helpful-tools/" />
+    <updated>2024-04-17T22:02:26Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/helpful-tools/</id>
+    <content xml:lang="" type="html">&lt;h2 id=&quot;email&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#email&quot;&gt;Email&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://mjml.io/&quot; rel=&quot;noopener&quot;&gt;MJML&lt;/a&gt; - Framework for building responsive emails.&lt;br /&gt;
+&lt;a href=&quot;https://www.caniemail.com/&quot; rel=&quot;noopener&quot;&gt;Can I Email&lt;/a&gt; - Email Client support tables for HTML/CSS features.&lt;/p&gt;
+&lt;h2 id=&quot;web-development&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#web-development&quot;&gt;Web Development&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://caniuse.com/&quot; rel=&quot;noopener&quot;&gt;Can I Use&lt;/a&gt; - Browser support tables for modern web technologies.&lt;br /&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; rel=&quot;noopener&quot;&gt;Mozilla Developer Network&lt;/a&gt; - Web documents for CSS, HTML, JavaScript and more&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>HTML Characters</title>
     <link href="https://www.brianbaldock.com/tidbits/html-characters/" />
     <updated>2024-03-27T00:00:00Z</updated>
     <id>https://www.brianbaldock.com/tidbits/html-characters/</id>
     <content xml:lang="" type="html">&lt;style&gt;
+    table {
+        position: relative;
+    }
+    thead th {
+        background-color: var(--color-bg);
+        position: sticky;
+        top: 0;
+    }
     th:nth-child(1) {
         width: 10%;
     }
@@ -30,9 +421,16 @@
     th:nth-child(4) {
         width: 20%;
     }
+    .blog:has(div.flow.prose) {
+        container-name: list;
+        container-type: inline-size;
+    }
     ul {
-        columns: 3;
-        li {
+        columns: 2;
+        @container list (min-width: 40em) {
+            columns: 3;
+        }
+     li {
             padding-block-start: 0 !important;
         }
     }
@@ -2001,7 +2399,22 @@
     <link href="https://www.brianbaldock.com/tidbits/business-card-sizes/" />
     <updated>2024-03-26T00:00:00Z</updated>
     <id>https://www.brianbaldock.com/tidbits/business-card-sizes/</id>
-    <content xml:lang="" type="html">&lt;table&gt;
+    <content xml:lang="" type="html">
+&lt;style&gt;
+    table {
+        position: relative;
+    }
+    thead th {
+        background-color: var(--color-bg);
+        position: sticky;
+        top: 0;
+    }
+    tbody &gt; tr:nth-child(odd) {
+        background-color: var(--color-bg-accent);
+    }
+&lt;/style&gt;
+
+&lt;table&gt;
     &lt;thead&gt;
     &lt;tr&gt;
         &lt;th&gt;Standard&lt;/th&gt;

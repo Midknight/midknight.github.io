@@ -6,16 +6,27 @@
   <link href="https://www.brianbaldock.com/feed.xml" rel="self" />
   <link href="https://www.brianbaldock.com/" />
   
-  <updated>2024-03-30T00:00:00Z</updated>
+  <updated>2024-04-30T00:00:00Z</updated>
   <id>https://www.brianbaldock.com/</id>
   <author>
     <name>Brian Baldock</name>
     <email>bbaldock04@hotmail.com</email>
   </author>
   <entry>
+    <title>Working Away</title>
+    <link href="https://www.brianbaldock.com/blog/working-away/" />
+    <updated>2024-04-30T00:00:00Z</updated>
+    <id>https://www.brianbaldock.com/blog/working-away/</id>
+    <content xml:lang="" type="html">&lt;p&gt;Reflecting on my career journey thus far, I find myself chipping away at summarizing the noteworthy projects I’ve undertaken. It’s been a humbling exercise, delving into memories of the various milestones and discoveries along the way.&lt;/p&gt;
+&lt;p&gt;Having built numerous websites throughout my career, ranging from brochure-style sites to intricate portals, I’ve found immense satisfaction in the process. However, the real excitement comes when I get the opportunity to work on web applications. This allows me to delve deeper into backend technologies, gaining a comprehensive understanding of the layers of security, engineering, and design that operate behind the scenes.&lt;/p&gt;
+&lt;p&gt;Each project has been a learning experience, allowing me to expand my skill set and refine my craft. From navigating the intricacies of frontend development to mastering the complexities of backend systems, I’ve embraced every challenge with enthusiasm and determination.&lt;/p&gt;
+&lt;p&gt;As I continue to evolve in my career, I’m grateful for the opportunity to contribute to meaningful projects and make a tangible impact in the digital landscape. With each new endeavor, I look forward to further growth, exploration, and discovery.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>New Site</title>
     <link href="https://www.brianbaldock.com/blog/new-site/" />
-    <updated>2024-03-30T00:00:00Z</updated>
+    <updated>2024-03-31T00:00:00Z</updated>
     <id>https://www.brianbaldock.com/blog/new-site/</id>
     <content xml:lang="" type="html">&lt;p&gt;It’s been awhile since I dedicated time to working on my own site. In fact, it’s lingered on the backburner for so long that the concept of having my own corner of the web faded into something of an anxious shadow, following me for what feels like ages. But thanks to my incredible wife’s unwavering support, I’ve finally summoned the courage to chase down that shadow and bring my vision to life. And here it is—my website, finally up and running. It’s a small victory, but an important one. Now, with this virtual canvas at my fingertips, I suppose I better roll up my sleeves and get cracking! Here’s to new beginnings and the exciting journey ahead.&lt;/p&gt;
 </content>

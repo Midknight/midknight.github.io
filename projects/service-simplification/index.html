@@ -38,7 +38,7 @@
 
 <!--  inline blogpost schema  -->
 
-<link rel="stylesheet" href="/assets/css/global.css?bf2f-400d-57f3" />
+<link rel="stylesheet" href="/assets/css/global.css?d58c-405f-2b5b" />
 <!-- preloads -->
 <link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Medium.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Bold.woff2" as="font" type="font/woff2" crossorigin />
@@ -48,13 +48,13 @@
 
 
 <!-- menu drawer js, if true in meta -->
-<script src="/assets/scripts/nav-drawer.js?bf2f-400d-57f3" defer></script>
+<script src="/assets/scripts/nav-drawer.js?d58c-405f-2b5b" defer></script>
 
 
 <!-- everything else: meta tags, icons, open graph etc.  -->
 <base href="/projects/service-simplification/" />
 
-<meta name="description" content=" My personal site, blog and repository of thought " />
+<meta name="description" content=" Asked to move a service in-house without understanding the need to improve and secure it further for the client " />
 
 <meta name="theme-color" content="#353535" />
 <!-- Search Engines -->
@@ -86,7 +86,7 @@
 <meta property="og:title" content="Service Simplification" />
 <meta property="og:image" content=" https://www.brianbaldock.com/assets/images/template/default-image.webp " />
 <meta property="og:image:alt" content=" Visible content: My personal site, blog and repository of thought " />
-<meta property="og:description" content="My personal site, blog and repository of thought" />
+<meta property="og:description" content="Asked to move a service in-house without understanding the need to improve and secure it further for the client" />
 <meta property="og:site_name" content="Brian Baldock" />
 <meta property="og:locale" content="en_CA" />
 <meta property="article:author" content="Brian Baldock" />
@@ -177,15 +177,75 @@
         </div>
     </section>
       <div class="site-main-spacer" aria-hidden="true"></div>
-      <main id="main" class="flow | site-main">
+      <main id="main" class="flow | site-main" tabindex="-1">
 <article class="region flow prose">
   <h1 class="gradient-text-reflection">Service Simplification</h1>
-  <div class="flow prose"></div>
+  <div class="flow prose"><h2 id="problem"><a class="heading-anchor" href="#problem">Problem</a></h2>
+<p>Onboarding new clients and maintaining existing ones relied on a third-party and antiquated server setup, leading to lengthy delays in receiving reasonable service guarantees.</p>
+<h2 id="solution"><a class="heading-anchor" href="#solution">Solution</a></h2>
+<p>Implemented a case-by-case workflow to onboard clients within a week to an in-house managed server.</p>
+<h2 id="steps"><a class="heading-anchor" href="#steps">Steps</a></h2>
+<ol class="list">
+<li>Reviewed all requirements.</li>
+<li>Analyzed each case by downloading all client information from the current server.</li>
+<li>Devised a streamlined initial template for onboarding new clients.</li>
+<li>Reviewed the workflow with the service owner and addressed potential nuances.</li>
+<li>Collaborated with the internal IT department to obtain SSL certificates and server assignment.</li>
+<li>Created an initial transition map to ensure capacity and capability.</li>
+<li>Conducted trial setups on a test server to identify any issues.</li>
+<li>Designed default and custom templates within the Content Management System.</li>
+<li>Created variables to speed up page setup.</li>
+<li>Documented default templates for future administrators.</li>
+<li>Established guidelines for custom templates.</li>
+<li>Conducted comprehensive testing of templates across various viewports, ensuring accessibility and compatibility with multiple browsers.</li>
+<li>Created documentation for clients on required digital assets.</li>
+<li>Conducted a second review of the workflow, templates, and documentation.</li>
+<li>Worked on internationalization of all templates.</li>
+<li>Adjusted server rules, redirects, and SSL certification.</li>
+<li>Obtained a wildcard for subdomains.</li>
+<li>Created an updated domain/subdomain map.</li>
+<li>Ensured consistency in imagery across all client sites.</li>
+<li>Requested updated logos and imagery from clients.</li>
+<li>Drafted communication to clients about the transition.</li>
+<li>Addressed client concerns and requirements.</li>
+<li>Adjusted domain/subdomain map based on client feedback.</li>
+<li>Scheduled transition with IT.</li>
+<li>Reviewed all documents, settings, steps, and files.</li>
+<li>Scheduled the transition for a Thursday evening, ensuring availability of IT support on Friday for any troubleshooting assistance, if needed.</li>
+<li>Conducted follow-up testing on all client portals.</li>
+<li>Established reminders for post-transition checks at 3, 6, 9 and 12 months.</li>
+<li>Updated Google Ad Services to point to the new URL structure.</li>
+</ol>
+<h2 id="results"><a class="heading-anchor" href="#results">Results</a></h2>
+<ul class="list">
+<li>Streamlined client setup based on a list of 10 questions.</li>
+<li>Reduced client setup time from 2-3 weeks to just 15 minutes.</li>
+<li>Custom sites for clients were set up within a day, usually within 4 hours.</li>
+<li>Improved localization of client sites.</li>
+<li>Enhanced security by bringing it in-house.</li>
+<li>Organized assets, common text, and domain structure.</li>
+<li>Improved client sign-up by implementing a dedicated phone number. Discovered during the update of Google Ads that clients were being directed to a general phone tree instead of a dedicated line.</li>
+</ul>
+<h2 id="technology-used"><a class="heading-anchor" href="#technology-used">Technology Used</a></h2>
+<ul class="list">
+<li>Microsoft
+<ul class="list">
+<li><abbr title="Internet Information Services">IIS</abbr>
+<ul class="list">
+<li><abbr title="Server Name Indication">SNI</abbr></li>
+</ul>
+</li>
+<li>Visual Studio Code</li>
+</ul>
+</li>
+<li>Orckestra C1 <abbr title="Content Management System">CMS</abbr></li>
+</ul>
+</div>
 </article>
 </main>
       <div class="site-main-spacer" aria-hidden="true"></div>
       <div class="site-logo-spacer" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 783 2159"><title>BDock Solutions</title><path fill="#f7f7f780" d="M391.454 782.908 0 391.454 391.454 0l391.454 391.454-391.454 391.454Zm-163.516-554.97V554.97H554.97V227.938H227.938Z"/><path fill="#f7f7f780" fill-rule="nonzero" d="M579.722 2145.638v-99.466c0-36.267-20.267-62.133-49.6-62.133-20 0-37.333 12.533-46.667 33.866-8-16-22.666-25.6-40.8-25.6-26.666 0-46.133 23.734-46.133 57.6v95.733h183.2Zm-110.667-45.333H435.19v-39.466c0-12.534 6.933-21.6 16.8-21.6 9.866 0 17.066 9.066 17.066 21.6v39.466Zm72 0h-36.8v-46.133c0-13.6 7.734-23.2 18.4-23.2 10.667 0 18.4 9.6 18.4 23.2v46.133ZM579.722 1967.505v-66.933c0-62.933-38.133-107.466-91.733-107.466s-91.467 44.533-91.467 107.466v66.933h183.2Zm-41.333-45.6H437.856v-28.266c0-31.467 20.8-53.6 50.133-53.6 29.333 0 50.4 22.133 50.4 53.6v28.266ZM582.922 1682.44c0-53.334-43.467-98.4-94.933-98.4-51.467 0-94.667 45.066-94.667 98.4 0 53.6 43.2 98.666 94.667 98.666 51.466 0 94.933-45.067 94.933-98.667Zm-41.333 0c0 28-24.534 51.732-53.6 51.732-28.8 0-53.333-23.733-53.333-51.733 0-28 24.533-51.466 53.333-51.466 29.066 0 53.6 23.466 53.6 51.466ZM582.922 1472.84c0-28.534-12.267-54.4-31.733-72.534l-29.334 33.067c12 9.6 19.734 23.733 19.734 39.467 0 28-24.534 51.733-53.6 51.733-28.8 0-53.333-23.734-53.333-51.733 0-15.467 7.733-29.867 19.733-39.2l-29.6-33.334c-19.2 18.134-31.467 44-31.467 72.534 0 53.6 43.2 98.666 94.667 98.666 51.466 0 94.933-45.067 94.933-98.666ZM579.722 1386.706v-45.6h-49.867l-22.666-20.8 72.533-51.733v-54.933l-105.333 74.933-77.867-69.6v54.4l78.133 67.733h-78.133v45.6h183.2ZM782.922 2073.905c0-45.333-22.934-73.333-59.734-73.333-34.4 0-46.133 26.4-54.933 67.467-5.867 27.2-9.6 36-20.8 36-9.066 0-16-8.267-16-22.934 0-17.066 6.667-35.466 19.467-52.266l-32.533-23.2c-16 19.466-25.067 43.466-25.067 74.4 0 41.6 23.467 69.866 58.667 69.866 36.8 0 47.466-29.067 56.266-68.266 6.4-26.667 8.8-35.2 19.733-35.2 9.867 0 16.8 8.8 16.8 25.866 0 22.4-8.533 42.4-23.2 60.267l30.667 25.866c20-22.4 30.667-52 30.667-84.533ZM782.922 1892.839c0-53.333-43.467-98.4-94.934-98.4-51.466 0-94.666 45.067-94.666 98.4 0 53.6 43.2 98.666 94.666 98.666 51.467 0 94.934-45.066 94.934-98.666Zm-41.334 0c0 28-24.533 51.733-53.6 51.733-28.8 0-53.333-23.733-53.333-51.733 0-28 24.534-51.467 53.333-51.467 29.067 0 53.6 23.467 53.6 51.467ZM738.922 1734.44h-142.4v45.599h183.2v-133.866h-40.8v88.266ZM782.922 1553.373c0-50.134-34.4-85.067-83.467-85.067H596.522v45.333h100.8c25.866 0 44.266 16.534 44.266 39.734 0 22.933-18.4 39.466-44.266 39.466h-100.8v45.6h102.933c49.067 0 83.467-35.2 83.467-85.066ZM779.722 1386.173v-45.6h-142.4v-55.733h-40.8v156.8h40.8v-55.467h142.4ZM596.522 1257.107v-45.6h183.2v45.6zM782.922 1098.707c0-53.333-43.467-98.4-94.934-98.4-51.466 0-94.666 45.067-94.666 98.4 0 53.6 43.2 98.666 94.666 98.666 51.467 0 94.934-45.066 94.934-98.666Zm-41.334 0c0 28-24.533 51.733-53.6 51.733-28.8 0-53.333-23.733-53.333-51.733 0-28 24.534-51.467 53.333-51.467 29.067 0 53.6 23.467 53.6 51.467ZM779.722 988.574v-45.6H671.455l108.267-80V817.64h-183.2v45.333h108.266l-108.266 80v45.6h183.2ZM782.922 724.301c0-45.333-22.934-73.333-59.734-73.333-34.4 0-46.133 26.4-54.933 67.466-5.867 27.2-9.6 36-20.8 36-9.066 0-16-8.266-16-22.933 0-17.067 6.667-35.466 19.467-52.266l-32.533-23.2c-16 19.466-25.067 43.466-25.067 74.4 0 41.6 23.467 69.866 58.667 69.866 36.8 0 47.466-29.067 56.266-68.267 6.4-26.666 8.8-35.2 19.733-35.2 9.867 0 16.8 8.8 16.8 25.867 0 22.4-8.533 42.4-23.2 60.267l30.667 25.866c20-22.4 30.667-52 30.667-84.533Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 783 2159"><title>BDock Solutions</title><path fill="#f7f7f780" d="M391.454 782.908 0 391.454 391.454 0l391.454 391.454-391.454 391.454Zm-163.516-554.97V554.97H554.97V227.938H227.938Z"/><path fill="#f7f7f780" fill-rule="nonzero" d="M579.722 2145.638v-99.466c0-36.267-20.267-62.133-49.6-62.133-20 0-37.333 12.533-46.667 33.866-8-16-22.666-25.6-40.8-25.6-26.666 0-46.133 23.734-46.133 57.6v95.733h183.2Zm-110.667-45.333H435.19v-39.466c0-12.534 6.933-21.6 16.8-21.6 9.866 0 17.066 9.066 17.066 21.6v39.466Zm72 0h-36.8v-46.133c0-13.6 7.734-23.2 18.4-23.2 10.667 0 18.4 9.6 18.4 23.2v46.133ZM579.722 1967.505v-66.933c0-62.933-38.133-107.466-91.733-107.466s-91.467 44.533-91.467 107.466v66.933h183.2Zm-41.333-45.6H437.856v-28.266c0-31.467 20.8-53.6 50.133-53.6 29.333 0 50.4 22.133 50.4 53.6v28.266ZM582.922 1682.44c0-53.334-43.467-98.4-94.933-98.4-51.467 0-94.667 45.066-94.667 98.4 0 53.6 43.2 98.666 94.667 98.666 51.466 0 94.933-45.067 94.933-98.667Zm-41.333 0c0 28-24.534 51.732-53.6 51.732-28.8 0-53.333-23.733-53.333-51.733 0-28 24.533-51.466 53.333-51.466 29.066 0 53.6 23.466 53.6 51.466ZM582.922 1472.84c0-28.534-12.267-54.4-31.733-72.534l-29.334 33.067c12 9.6 19.734 23.733 19.734 39.467 0 28-24.534 51.733-53.6 51.733-28.8 0-53.333-23.734-53.333-51.733 0-15.467 7.733-29.867 19.733-39.2l-29.6-33.334c-19.2 18.134-31.467 44-31.467 72.534 0 53.6 43.2 98.666 94.667 98.666 51.466 0 94.933-45.067 94.933-98.666ZM579.722 1386.706v-45.6h-49.867l-22.666-20.8 72.533-51.733v-54.933l-105.333 74.933-77.867-69.6v54.4l78.133 67.733h-78.133v45.6h183.2ZM782.922 2073.905c0-45.333-22.934-73.333-59.734-73.333-34.4 0-46.133 26.4-54.933 67.467-5.867 27.2-9.6 36-20.8 36-9.066 0-16-8.267-16-22.934 0-17.066 6.667-35.466 19.467-52.266l-32.533-23.2c-16 19.466-25.067 43.466-25.067 74.4 0 41.6 23.467 69.866 58.667 69.866 36.8 0 47.466-29.067 56.266-68.266 6.4-26.667 8.8-35.2 19.733-35.2 9.867 0 16.8 8.8 16.8 25.866 0 22.4-8.533 42.4-23.2 60.267l30.667 25.866c20-22.4 30.667-52 30.667-84.533ZM782.922 1892.839c0-53.333-43.467-98.4-94.934-98.4-51.466 0-94.666 45.067-94.666 98.4 0 53.6 43.2 98.666 94.666 98.666 51.467 0 94.934-45.066 94.934-98.666Zm-41.334 0c0 28-24.533 51.733-53.6 51.733-28.8 0-53.333-23.733-53.333-51.733 0-28 24.534-51.467 53.333-51.467 29.067 0 53.6 23.467 53.6 51.467ZM738.922 1734.44h-142.4v45.599h183.2v-133.866h-40.8v88.266ZM782.922 1553.373c0-50.134-34.4-85.067-83.467-85.067H596.522v45.333h100.8c25.866 0 44.266 16.534 44.266 39.734 0 22.933-18.4 39.466-44.266 39.466h-100.8v45.6h102.933c49.067 0 83.467-35.2 83.467-85.066ZM779.722 1386.173v-45.6h-142.4v-55.733h-40.8v156.8h40.8v-55.467h142.4ZM596.522 1257.107v-45.6h183.2v45.6zM782.922 1098.707c0-53.333-43.467-98.4-94.934-98.4-51.466 0-94.666 45.067-94.666 98.4 0 53.6 43.2 98.666 94.666 98.666 51.467 0 94.934-45.066 94.934-98.666Zm-41.334 0c0 28-24.533 51.733-53.6 51.733-28.8 0-53.333-23.733-53.333-51.733 0-28 24.534-51.467 53.333-51.467 29.067 0 53.6 23.467 53.6 51.467ZM779.722 988.574v-45.6H671.455l108.267-80V817.64h-183.2v45.333h108.266l-108.266 80v45.6h183.2ZM782.922 724.301c0-45.333-22.934-73.333-59.734-73.333-34.4 0-46.133 26.4-54.933 67.466-5.867 27.2-9.6 36-20.8 36-9.066 0-16-8.266-16-22.933 0-17.067 6.667-35.466 19.467-52.266l-32.533-23.2c-16 19.466-25.067 43.466-25.067 74.4 0 41.6 23.467 69.866 58.667 69.866 36.8 0 47.466-29.067 56.266-68.267 6.4-26.666 8.8-35.2 19.733-35.2 9.867 0 16.8 8.8 16.8 25.867 0 22.4-8.533 42.4-23.2 60.267l30.667 25.866c20-22.4 30.667-52 30.667-84.533Z"/></svg>
       </div>
       <div class="site-footer-spacer" aria-hidden="true"></div>
       <footer class="site-foot" id="footer">
