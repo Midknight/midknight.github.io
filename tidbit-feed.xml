@@ -6,188 +6,16 @@
   <link href="https://www.brianbaldock.com/tidbit-feed.xml" rel="self" />
   <link href="https://www.brianbaldock.com/" />
   
-  <updated>2024-05-07T00:00:00Z</updated>
+  <updated>2024-05-08T18:06:35Z</updated>
   <id>https://www.brianbaldock.com/</id>
   <author>
     <name>Brian Baldock</name>
     <email>bbaldock04@hotmail.com</email>
   </author>
   <entry>
-    <title>HTML5 Input Patterns</title>
-    <link href="https://www.brianbaldock.com/tidbits/html5-input-patterns/" />
-    <updated>2024-05-07T00:00:00Z</updated>
-    <id>https://www.brianbaldock.com/tidbits/html5-input-patterns/</id>
-    <content xml:lang="" type="html">
-&lt;style&gt;
-    form {
-        border-block-start: 1px solid var(--color-bg-accent);
-    }
-&lt;/style&gt;
-
-&lt;p&gt;The patterns presented here are a compilation gathered from blog posts and websites, offering solutions and troubleshooting for regular expressions (RegEx) in various input fields.&lt;/p&gt;
-&lt;p&gt;Regarding email addresses, it&#39;s advisable to rely on browser capabilities for validation, as discerning their complexity is best suited for developers, allowing browsers to integrate it into their validation and security libraries.&lt;/p&gt;
-
-&lt;div class=&quot;stack flow&quot;&gt;
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;basic-password&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#basic-password&quot; class=&quot;heading-anchor&quot;&gt;Basic Password&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;This pattern looks for the basics in password character combinations.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;^(?=.*&#92;d)(?=.*[a-z])(?=.*[A-Z])(?!.*&#92;s).*$&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblPassword1&quot; for=&quot;txtPassword1&quot;&gt;Password&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtPassword1&quot; name=&quot;txtPassword1&quot; type=&quot;password&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;^(?=.*&#92;d)(?=.*[a-z])(?=.*[A-Z])(?!.*&#92;s).*$&quot; placeholder=&quot;Example: PassWord1&quot; aria-labelledby=&quot;lblPassword1 expPassword1&quot; /&gt;
-        &lt;span id=&quot;expPassword1&quot;&gt;Uppercase, Lowercase, and Numbers&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;input type=&quot;submit&quot; value=&quot;Test Basic Password Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;not-so-basic-password&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#not-so-basic-password&quot; class=&quot;heading-anchor&quot;&gt;Not so basic password&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;This pattern incorporates special characters, and a minimum of 10 characters.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;(?=^.{10,}$)((?=.*&#92;d)|(?=.*&#92;W+))(?![.&#92;n])(?=.*[A-Z])(?=.*[a-z]).*$&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblPassword2&quot; for=&quot;txtPassword2&quot;&gt;Password&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtPassword2&quot; name=&quot;txtPassword2&quot; type=&quot;password&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(?=^.{10,}$)((?=.*&#92;d)|(?=.*&#92;W+))(?![.&#92;n])(?=.*[A-Z])(?=.*[a-z]).*$&quot; placeholder=&quot;Example: PassWord$1&quot; aria-labelledby=&quot;lblPassword2 expPassword2&quot; /&gt;
-        &lt;span id=&quot;expPassword2&quot;&gt;Uppercase, Lowercase, Number/Special Characters and a Minimum of 10 Characters&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Not so basic password Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;alpha-numeric&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#alpha-numeric&quot; class=&quot;heading-anchor&quot;&gt;Alpha Numeric&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;Upper or lower case letters and numbers that&#39;s it.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;[a-zA-Z0-9]+&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblAlphaNumeric&quot; for=&quot;txtAlphaNumeric&quot;&gt;Alpha Numeric&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtAlphaNumeric&quot; name=&quot;txtAlphaNumeric&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[a-zA-Z0-9]+&quot; placeholder=&quot;Example: AlphaNumeric1234&quot; aria-labelledby=&quot;lblAlphaNumeric expAlphaNumeric&quot; /&gt;
-        &lt;span id=&quot;expAlphaNumeric&quot;&gt;Uppercase, Lowercase, and Numbers&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Alpha Numeric Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;username&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#username&quot; class=&quot;heading-anchor&quot;&gt;Username&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;A pattern to ensure a username is within 2 - 20 characters long with upper/lower case alpha numeric characters, hyphen, underscore or period in it.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;^[a-zA-Z][a-zA-Z0-9-_&#92;.]{1,20}$&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblUsername&quot; for=&quot;txtUsername&quot;&gt;Username&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtUsername&quot; name=&quot;txtUsername&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;^[a-zA-Z][a-zA-Z0-9-_&#92;.]{1,20}$&quot; placeholder=&quot;Example: Username_was-here.1&quot; aria-labelledby=&quot;lblUsername expUsername&quot; /&gt;
-        &lt;span id=&quot;expUsername&quot;&gt;2 - 20 Characters including hyphen, underscore and period&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Username Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;us-postal-zipcode&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#us-postal-zipcode&quot; class=&quot;heading-anchor&quot;&gt;US Postal Zipcode&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;Pattern to quickly check against the US Postal System pattern.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;(&#92;d{5}([&#92;-]&#92;d{4})?)&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblUSPostalCode&quot; for=&quot;txtUSPostalCode&quot;&gt;United States Zipcode&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtUSPostalCode&quot; name=&quot;txtUSPostalCode&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(&#92;d{5}([&#92;-]&#92;d{4})?)&quot; placeholder=&quot;Example: 50212&quot; aria-labelledby=&quot;lblUSPostalCode expUSPostalCode&quot; /&gt;
-        &lt;span id=&quot;expUSPostalCode&quot;&gt;##### or #####-####&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test US Postal Code Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;canadian-postal-code&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#canadian-postal-code&quot; class=&quot;heading-anchor&quot;&gt;Canadian Postal Code&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;Pattern to quickly check against the Canadian Postal System pattern.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblCANPostalCode&quot; for=&quot;txtCANPostalCode&quot;&gt;Canadian Postal Code&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtCANPostalCode&quot; name=&quot;txtCANPostalCode&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]&quot; placeholder=&quot;Example: H0H 0H0&quot; aria-labelledby=&quot;lblCANPostalCode expCANPostalCode&quot; /&gt;
-        &lt;span id=&quot;expCANPostalCode&quot;&gt;A#A #A#&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Canadian Postal Code Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;numeric-postal-code&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#numeric-postal-code&quot; class=&quot;heading-anchor&quot;&gt;Numeric Postal Code&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;This is a fairly generic pattern for several countries out there that don&#39;t have anything overly complicated with their postal system.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;[0-9]{4}&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblNumericPostalCode&quot; for=&quot;txtNumericPostalCode&quot;&gt;Numeric Postal Code&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtNumericPostalCode&quot; name=&quot;txtNumericPostalCode&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[0-9]{4}&quot; placeholder=&quot;Example: 1234&quot; aria-labelledby=&quot;lblNumericPostalCode expNumericPostalCode&quot; /&gt;
-        &lt;span id=&quot;expNumericPostalCode&quot;&gt;####&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Numeric Postal Code Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;basic-date&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#basic-date&quot; class=&quot;heading-anchor&quot;&gt;Basic Date&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;Checks to ensure its year, month, date with the corresponding possible values.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblBasicDate&quot; for=&quot;txtBasicDate&quot;&gt;Basic Date&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtBasicDate&quot; name=&quot;txtBasicDate&quot; type=&quot;date&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])&quot; placeholder=&quot;Example: 2024-05-06&quot; aria-labelledby=&quot;lblBasicDate expBasicDate&quot; /&gt;
-        &lt;span id=&quot;expBasicDate&quot;&gt;YYYY-MM-DD&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Basic Date Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;full-date-validation&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#full-date-validation&quot; class=&quot;heading-anchor&quot;&gt;Full Date Validation&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;This date pattern incorporates year restriction, and checks against leap year.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;(?:18|19|20)(?:(?:[13579][26]|[02468][048])-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))|(?:[0-9]{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31)))&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblFullDateValidation&quot; for=&quot;txtFullDateValidation&quot;&gt;Full Date Validation&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtFullDateValidation&quot; name=&quot;txtFullDateValidation&quot; type=&quot;date&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(?:18|19|20)(?:(?:[13579][26]|[02468][048])-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))|(?:[0-9]{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31)))&quot; placeholder=&quot;Example: 2024-02-29&quot; aria-labelledby=&quot;lblFullDateValidation expFullDateValidation&quot; /&gt;
-        &lt;span id=&quot;expFullDateValidation&quot;&gt;YYYY-MM-DD&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Full Date Validation Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;time&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#time&quot; class=&quot;heading-anchor&quot;&gt;Time&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;Pattern to ensure valid time is recorded.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblTime&quot; for=&quot;txtTime&quot;&gt;Time&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtTime&quot; name=&quot;txtTime&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}&quot; placeholder=&quot;Example: 12:34:56&quot; aria-labelledby=&quot;lblTime expTime&quot; /&gt;
-        &lt;span id=&quot;expTime&quot;&gt;hh:mm:ss&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Time Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;price&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#price&quot; class=&quot;heading-anchor&quot;&gt;Price&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;Pattern to ensure a proper price is entered with dollars and cents to the nearest two decimal places.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;&#92;d+(&#92;.&#92;d{2})?&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblPrice&quot; for=&quot;txtPrice&quot;&gt;Price&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtPrice&quot; name=&quot;txtPrice&quot; type=&quot;text&quot; inputmode=&quot;decimal&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;&#92;d+(&#92;.&#92;d{2})?&quot; placeholder=&quot;Example: 1.49&quot; aria-labelledby=&quot;lblPrice expPrice&quot; /&gt;
-        &lt;span id=&quot;expPrice&quot;&gt;#.##&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test Price Pattern&quot; /&gt;
-&lt;/form&gt;
-
-&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
-    &lt;h2 id=&quot;north-american-phone-number&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#north-american-phone-number&quot; class=&quot;heading-anchor&quot;&gt;North American Phone Number&lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;Phone Number pattern for Canada and the US.&lt;/p&gt;
-    &lt;p&gt;Pattern: &lt;code&gt;&#92;d{3}[&#92;-]&#92;d{3}[&#92;-]&#92;d{4}&lt;/code&gt;&lt;/p&gt;
-    &lt;label id=&quot;lblNAPhoneNumber&quot; for=&quot;txtNAPhoneNumber&quot;&gt;North American Phone Number&lt;/label&gt;
-    &lt;span&gt;
-        &lt;input id=&quot;txtNAPhoneNumber&quot; name=&quot;txtNAPhoneNumber&quot; type=&quot;text&quot; inputmode=&quot;tel&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;&#92;d{3}[&#92;-]&#92;d{3}[&#92;-]&#92;d{4}&quot; placeholder=&quot;Example: 123-456-7890&quot; aria-labelledby=&quot;lblNAPhoneNumber expNAPhoneNumber&quot; /&gt;
-        &lt;span id=&quot;expNAPhoneNumber&quot;&gt;###-###-####&lt;/span&gt;
-    &lt;/span&gt;
-
-    &lt;input type=&quot;submit&quot; value=&quot;Test North American Phone Number Pattern&quot; /&gt;
-&lt;/form&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
     <title>Pitch Conversions</title>
     <link href="https://www.brianbaldock.com/tidbits/pitch-conversions/" />
-    <updated>2024-04-25T00:00:00Z</updated>
+    <updated>2024-05-08T18:06:35Z</updated>
     <id>https://www.brianbaldock.com/tidbits/pitch-conversions/</id>
     <content xml:lang="" type="html">&lt;style&gt;
     table {
@@ -555,40 +383,662 @@
 </content>
   </entry>
   <entry>
-    <title>Helpful Tools</title>
-    <link href="https://www.brianbaldock.com/tidbits/helpful-tools/" />
-    <updated>2024-04-17T22:02:26Z</updated>
-    <id>https://www.brianbaldock.com/tidbits/helpful-tools/</id>
-    <content xml:lang="" type="html">&lt;h2 id=&quot;accessibility&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#accessibility&quot;&gt;Accessibility&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://colorable.jxnblk.com/&quot; rel=&quot;noopener&quot;&gt;Colorable&lt;/a&gt; - Quick tool to check contrast by Brent Jackson.&lt;/p&gt;
-&lt;h2 id=&quot;design&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#design&quot;&gt;Design&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://affinity.serif.com/&quot; rel=&quot;noopener&quot;&gt;Affinity&lt;/a&gt; - My new workflow revolves around the Affinity StudioLink functionality of Photo, Designer and Publisher by Serif.&lt;br /&gt;
-&lt;a href=&quot;https://coolors.co/?ref=5fec23f6bec2fe000a58509c&quot; rel=&quot;noopener&quot;&gt;Coolors&lt;/a&gt; - Awesome colour palette generator and all around colour tool.&lt;br /&gt;
-&lt;a href=&quot;https://penpot.app/&quot; rel=&quot;noopener&quot;&gt;Penpot&lt;/a&gt; - An alternative to Figma, Sketch and XD.&lt;br /&gt;
-&lt;a href=&quot;https://open-foundry.com/&quot; rel=&quot;noopener&quot;&gt;Open Foundry&lt;/a&gt; - a free platform for curated open-source typefaces.&lt;br /&gt;
-&lt;a href=&quot;https://www.fluid-type-scale.com/&quot; rel=&quot;noopener&quot;&gt;Fluid Type Scale Calculator&lt;/a&gt; - Using CSS Clamp&lt;/p&gt;
-&lt;h2 id=&quot;email&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#email&quot;&gt;Email&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://mjml.io/&quot; rel=&quot;noopener&quot;&gt;MJML&lt;/a&gt; - Framework for building responsive emails.&lt;br /&gt;
-&lt;a href=&quot;https://www.caniemail.com/&quot; rel=&quot;noopener&quot;&gt;Can I Email&lt;/a&gt; - Email Client support tables for HTML/CSS features.&lt;/p&gt;
-&lt;h2 id=&quot;ideation&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#ideation&quot;&gt;Ideation&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://coggle.it/recommend/54108cd1434772e2240014d9&quot; rel=&quot;noopener&quot;&gt;Coggle&lt;/a&gt; - I’ve been using Coggle for years now to get my ideas out on a mind map.&lt;/p&gt;
-&lt;h2 id=&quot;network&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#network&quot;&gt;Network&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://pi-hole.net/&quot; rel=&quot;noopener&quot;&gt;Pi-hole&lt;/a&gt; - A network-wide ad and tracking blocker that operates at the DNS level, efficiently blocking ads and improving internet browsing experience for all devices on the network.&lt;/p&gt;
-&lt;h2 id=&quot;stock-assets&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#stock-assets&quot;&gt;Stock Assets&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dimensions.com/&quot; rel=&quot;noopener&quot;&gt;Dimensions&lt;/a&gt; - Site dedicated to dimensioned drawings with standard measurements and sizes of everyday objects and spaces from around the world.&lt;br /&gt;
-&lt;a href=&quot;https://www.bluevertigo.com.ar/&quot; rel=&quot;noopener&quot;&gt;Blue Vertigo&lt;/a&gt; - An amazing list of digital assets from stock photos to pattern mixes.&lt;br /&gt;
-&lt;a href=&quot;https://unsplash.com/&quot; rel=&quot;noopener&quot;&gt;Unsplash&lt;/a&gt; - A source of freely usable images by creators. You will have seen several on my site.&lt;/p&gt;
-&lt;h2 id=&quot;web-development&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#web-development&quot;&gt;Web Development&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://jakearchibald.github.io/svgomg/&quot; rel=&quot;noopener&quot;&gt;SVGOMG&lt;/a&gt; - Jake Archibald’s robust SVG tool. I’ve used this a lot throughout most of my projects. Big Thanks to Jake!&lt;br /&gt;
-&lt;a href=&quot;https://caniuse.com/&quot; rel=&quot;noopener&quot;&gt;Can I Use&lt;/a&gt; - Browser support tables for modern web technologies.&lt;br /&gt;
-&lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; rel=&quot;noopener&quot;&gt;Mozilla Developer Network&lt;/a&gt; - Web documents for CSS, HTML, JavaScript and more.&lt;br /&gt;
-&lt;a href=&quot;https://regexr.com/&quot; rel=&quot;noopener&quot;&gt;RegExr&lt;/a&gt; - a gskinner tool that is super useful for those times you are trying to crack a RegEx issue.&lt;/p&gt;
-</content>
+    <title>Conversion Chart</title>
+    <link href="https://www.brianbaldock.com/tidbits/conversion-chart/" />
+    <updated>2024-05-08T18:06:26Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/conversion-chart/</id>
+    <content xml:lang="" type="html">&lt;style&gt;
+    table {
+        position: relative;
+    }
+    thead th {
+        background-color: var(--color-bg);
+        position: sticky;
+        top: 0;
+    }
+    tbody &gt; tr:nth-child(8n) {
+        background-color: var(--color-bg-accent);
+        font-weight: var(--font-bold);
+    }
+&lt;/style&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Inch Fraction&lt;/th&gt;
+        &lt;th&gt;Inch Decimal&lt;/th&gt;
+        &lt;th&gt;Millimeters&lt;/th&gt;
+        &lt;th&gt;Points &lt;br /&gt;&lt;small&gt;72 per inch&lt;/small&gt;&lt;/th&gt;
+        &lt;th&gt;REM &lt;br /&gt;&lt;small&gt;(Base font of 16px)&lt;/small&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.015625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;0.3969&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;1.125&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.0938&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.03125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;0.7938&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;2.250&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.1875&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.046875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;1.1906&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;3.3749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.2813&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/16&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.0625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;1.5875&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;4.5&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.375&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;5/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.078125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;1.9844&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;5.625&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.4688&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.09375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;2.3813&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;6.750&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.5625&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;7/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.109375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;2.7781&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;7.8749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.6563&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/8&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;3.175&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;9&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.75&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;9/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.140625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;3.5719&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;10.125&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.8438&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;5/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.15625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;3.9688&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;11.250&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;0.9375&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;11/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.171875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;4.3656&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;12.3749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.0313&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/16&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.1875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;4.7625&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;13.5&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.125&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;13/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.203125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;5.15940&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;14.625&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.2188&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;7/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.21875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;5.5563&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;15.750&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.3125&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;15/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.234375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;5.9531&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;16.8749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.4063&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/4&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.25&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;6.35&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;18&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;17/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.265625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;6.7469&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;19.125&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.5938&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;9/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.28125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;7.1438&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;20.250&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.6875&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;19/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.296875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;7.5406&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;21.3749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.7813&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;5/16&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.3125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;7.9375&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;22.5&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.875&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;21/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.328125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;8.3344&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;23.625&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;1.9688&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;11/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.34375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;8.7313&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;24.750&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.0625&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;23/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.359375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;9.1281&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;25.8749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.1563&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/8&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;9.525&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;27&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;25/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.390625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;9.9219&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;28.125&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.3438&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;13/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.40625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;10.3188&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;29.250&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.4375&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;27/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.421875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;10.7156&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;30.3749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.5313&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;7/16&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.4375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;11.1125&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;31.5&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.625&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;29/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.453125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;11.5094&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;32.625&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.7188&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;15/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.46875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;11.9063&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;33.750&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.8125&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;31/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.484375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;12.3031&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;34.8749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;2.9063&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/2&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.5&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;12.7&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;36&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;33/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.515625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;13.0969&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;37.125&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.0938&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;17/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.53125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;13.4938&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;38.250&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.1875&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;35/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.546875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;13.8906&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;39.3749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.2813&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;9/16&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.5625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;14.2875&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;40.5&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.375&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;37/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.578125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;14.6844&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;41.625&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.4688&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;19/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.59375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;15.0813&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;42.750&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.5625&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;39/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.609375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;15.4781&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;43.8749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.6563&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;5/8&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;15.8750&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;45&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.75&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;41/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.640625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;16.2719&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;46.125&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.8438&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;21/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.65625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;16.6688&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;47.250&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;3.9375&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;43/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.671875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;17.0656&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;48.3749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.0313&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;11/16&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.6875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;17.4625&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;49.5&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.125&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;45/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.703125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;17.8594&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;50.625&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.2188&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;23/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.71875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;18.2563&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;51.750&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.3125&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;47/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.734375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;18.6531&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;52.8749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.4063&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/4&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.75&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;19.05&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;54&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;49/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.765625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;19.4469&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;55.125&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.5938&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;25/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.78125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;19.8438&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;56.250&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.6875&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;51/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.796875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;20.2406&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;57.3749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.7813&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;13/16&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.8125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;20.6375&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;58.5&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.875&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;53/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.828125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;21.0344&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;59.625&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.9688&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;27/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.84375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;21.4313&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;60.750&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.0625&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;55/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.859375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;21.8281&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;61.8749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.1563&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;7/8&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;22.225&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;63&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;57/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.890625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;22.6219&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;64.125&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.3438&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;29/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.90625&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;23.0188&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;65.250&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;4.4375&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;59/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.921875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;23.4156&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;66.3749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.5313&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;15/16&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.9375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;23.8125&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;67.5&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.625&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;61/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.953125&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;24.2094&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;68.625&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.7188&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;31/32&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.96875&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;24.6063&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;69.750&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.8125&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;63/64&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.984375&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;25.0031&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;70.8749&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;5.9063&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1&lt;/td&gt;
+        &lt;td data-label=&quot;Inch Decimal&quot;&gt;1&lt;/td&gt;
+        &lt;td data-label=&quot;Millimeters&quot;&gt;25.4&lt;/td&gt;
+        &lt;td data-label=&quot;Points&quot;&gt;72&lt;/td&gt;
+        &lt;td data-label=&quot;REM&quot;&gt;6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;	
+&lt;/table&gt;</content>
+  </entry>
+  <entry>
+    <title>HTML5 Input Patterns</title>
+    <link href="https://www.brianbaldock.com/tidbits/html5-input-patterns/" />
+    <updated>2024-05-08T18:06:14Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/html5-input-patterns/</id>
+    <content xml:lang="" type="html">
+&lt;style&gt;
+    form {
+        border-block-start: 1px solid var(--color-bg-accent);
+    }
+&lt;/style&gt;
+
+&lt;p&gt;The patterns presented here are a compilation gathered from blog posts and websites, offering solutions and troubleshooting for regular expressions (RegEx) in various input fields.&lt;/p&gt;
+&lt;p&gt;Regarding email addresses, it&#39;s advisable to rely on browser capabilities for validation, as discerning their complexity is best suited for developers, allowing browsers to integrate it into their validation and security libraries.&lt;/p&gt;
+
+&lt;div class=&quot;stack flow&quot;&gt;
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;basic-password&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#basic-password&quot; class=&quot;heading-anchor&quot;&gt;Basic Password&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;This pattern looks for the basics in password character combinations.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;^(?=.*&#92;d)(?=.*[a-z])(?=.*[A-Z])(?!.*&#92;s).*$&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblPassword1&quot; for=&quot;txtPassword1&quot;&gt;Password&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtPassword1&quot; name=&quot;txtPassword1&quot; type=&quot;password&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;^(?=.*&#92;d)(?=.*[a-z])(?=.*[A-Z])(?!.*&#92;s).*$&quot; placeholder=&quot;Example: PassWord1&quot; aria-labelledby=&quot;lblPassword1 expPassword1&quot; /&gt;
+        &lt;span id=&quot;expPassword1&quot;&gt;Uppercase, Lowercase, and Numbers&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Test Basic Password Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;not-so-basic-password&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#not-so-basic-password&quot; class=&quot;heading-anchor&quot;&gt;Not so basic password&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;This pattern incorporates special characters, and a minimum of 10 characters.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;(?=^.{10,}$)((?=.*&#92;d)|(?=.*&#92;W+))(?![.&#92;n])(?=.*[A-Z])(?=.*[a-z]).*$&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblPassword2&quot; for=&quot;txtPassword2&quot;&gt;Password&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtPassword2&quot; name=&quot;txtPassword2&quot; type=&quot;password&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(?=^.{10,}$)((?=.*&#92;d)|(?=.*&#92;W+))(?![.&#92;n])(?=.*[A-Z])(?=.*[a-z]).*$&quot; placeholder=&quot;Example: PassWord$1&quot; aria-labelledby=&quot;lblPassword2 expPassword2&quot; /&gt;
+        &lt;span id=&quot;expPassword2&quot;&gt;Uppercase, Lowercase, Number/Special Characters and a Minimum of 10 Characters&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Not so basic password Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;alpha-numeric&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#alpha-numeric&quot; class=&quot;heading-anchor&quot;&gt;Alpha Numeric&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Upper or lower case letters and numbers that&#39;s it.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;[a-zA-Z0-9]+&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblAlphaNumeric&quot; for=&quot;txtAlphaNumeric&quot;&gt;Alpha Numeric&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtAlphaNumeric&quot; name=&quot;txtAlphaNumeric&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[a-zA-Z0-9]+&quot; placeholder=&quot;Example: AlphaNumeric1234&quot; aria-labelledby=&quot;lblAlphaNumeric expAlphaNumeric&quot; /&gt;
+        &lt;span id=&quot;expAlphaNumeric&quot;&gt;Uppercase, Lowercase, and Numbers&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Alpha Numeric Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;username&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#username&quot; class=&quot;heading-anchor&quot;&gt;Username&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;A pattern to ensure a username is within 2 - 20 characters long with upper/lower case alpha numeric characters, hyphen, underscore or period in it.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;^[a-zA-Z][a-zA-Z0-9-_&#92;.]{1,20}$&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblUsername&quot; for=&quot;txtUsername&quot;&gt;Username&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtUsername&quot; name=&quot;txtUsername&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;^[a-zA-Z][a-zA-Z0-9-_&#92;.]{1,20}$&quot; placeholder=&quot;Example: Username_was-here.1&quot; aria-labelledby=&quot;lblUsername expUsername&quot; /&gt;
+        &lt;span id=&quot;expUsername&quot;&gt;2 - 20 Characters including hyphen, underscore and period&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Username Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;us-postal-zipcode&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#us-postal-zipcode&quot; class=&quot;heading-anchor&quot;&gt;US Postal Zipcode&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Pattern to quickly check against the US Postal System pattern.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;(&#92;d{5}([&#92;-]&#92;d{4})?)&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblUSPostalCode&quot; for=&quot;txtUSPostalCode&quot;&gt;United States Zipcode&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtUSPostalCode&quot; name=&quot;txtUSPostalCode&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(&#92;d{5}([&#92;-]&#92;d{4})?)&quot; placeholder=&quot;Example: 50212&quot; aria-labelledby=&quot;lblUSPostalCode expUSPostalCode&quot; /&gt;
+        &lt;span id=&quot;expUSPostalCode&quot;&gt;##### or #####-####&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test US Postal Code Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;canadian-postal-code&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#canadian-postal-code&quot; class=&quot;heading-anchor&quot;&gt;Canadian Postal Code&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Pattern to quickly check against the Canadian Postal System pattern.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblCANPostalCode&quot; for=&quot;txtCANPostalCode&quot;&gt;Canadian Postal Code&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtCANPostalCode&quot; name=&quot;txtCANPostalCode&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]&quot; placeholder=&quot;Example: H0H 0H0&quot; aria-labelledby=&quot;lblCANPostalCode expCANPostalCode&quot; /&gt;
+        &lt;span id=&quot;expCANPostalCode&quot;&gt;A#A #A#&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Canadian Postal Code Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;numeric-postal-code&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#numeric-postal-code&quot; class=&quot;heading-anchor&quot;&gt;Numeric Postal Code&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;This is a fairly generic pattern for several countries out there that don&#39;t have anything overly complicated with their postal system.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;[0-9]{4}&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblNumericPostalCode&quot; for=&quot;txtNumericPostalCode&quot;&gt;Numeric Postal Code&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtNumericPostalCode&quot; name=&quot;txtNumericPostalCode&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[0-9]{4}&quot; placeholder=&quot;Example: 1234&quot; aria-labelledby=&quot;lblNumericPostalCode expNumericPostalCode&quot; /&gt;
+        &lt;span id=&quot;expNumericPostalCode&quot;&gt;####&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Numeric Postal Code Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;basic-date&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#basic-date&quot; class=&quot;heading-anchor&quot;&gt;Basic Date&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Checks to ensure its year, month, date with the corresponding possible values.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblBasicDate&quot; for=&quot;txtBasicDate&quot;&gt;Basic Date&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtBasicDate&quot; name=&quot;txtBasicDate&quot; type=&quot;date&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])&quot; placeholder=&quot;Example: 2024-05-06&quot; aria-labelledby=&quot;lblBasicDate expBasicDate&quot; /&gt;
+        &lt;span id=&quot;expBasicDate&quot;&gt;YYYY-MM-DD&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Basic Date Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;full-date-validation&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#full-date-validation&quot; class=&quot;heading-anchor&quot;&gt;Full Date Validation&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;This date pattern incorporates year restriction, and checks against leap year.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;(?:18|19|20)(?:(?:[13579][26]|[02468][048])-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))|(?:[0-9]{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31)))&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblFullDateValidation&quot; for=&quot;txtFullDateValidation&quot;&gt;Full Date Validation&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtFullDateValidation&quot; name=&quot;txtFullDateValidation&quot; type=&quot;date&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(?:18|19|20)(?:(?:[13579][26]|[02468][048])-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))|(?:[0-9]{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31)))&quot; placeholder=&quot;Example: 2024-02-29&quot; aria-labelledby=&quot;lblFullDateValidation expFullDateValidation&quot; /&gt;
+        &lt;span id=&quot;expFullDateValidation&quot;&gt;YYYY-MM-DD&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Full Date Validation Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;time&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#time&quot; class=&quot;heading-anchor&quot;&gt;Time&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Pattern to ensure valid time is recorded.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblTime&quot; for=&quot;txtTime&quot;&gt;Time&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtTime&quot; name=&quot;txtTime&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}&quot; placeholder=&quot;Example: 12:34:56&quot; aria-labelledby=&quot;lblTime expTime&quot; /&gt;
+        &lt;span id=&quot;expTime&quot;&gt;hh:mm:ss&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Time Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;price&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#price&quot; class=&quot;heading-anchor&quot;&gt;Price&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Pattern to ensure a proper price is entered with dollars and cents to the nearest two decimal places.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;&#92;d+(&#92;.&#92;d{2})?&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblPrice&quot; for=&quot;txtPrice&quot;&gt;Price&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtPrice&quot; name=&quot;txtPrice&quot; type=&quot;text&quot; inputmode=&quot;decimal&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;&#92;d+(&#92;.&#92;d{2})?&quot; placeholder=&quot;Example: 1.49&quot; aria-labelledby=&quot;lblPrice expPrice&quot; /&gt;
+        &lt;span id=&quot;expPrice&quot;&gt;#.##&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Price Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;north-american-phone-number&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#north-american-phone-number&quot; class=&quot;heading-anchor&quot;&gt;North American Phone Number&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Phone Number pattern for Canada and the US.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;&#92;d{3}[&#92;-]&#92;d{3}[&#92;-]&#92;d{4}&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblNAPhoneNumber&quot; for=&quot;txtNAPhoneNumber&quot;&gt;North American Phone Number&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtNAPhoneNumber&quot; name=&quot;txtNAPhoneNumber&quot; type=&quot;text&quot; inputmode=&quot;tel&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;&#92;d{3}[&#92;-]&#92;d{3}[&#92;-]&#92;d{4}&quot; placeholder=&quot;Example: 123-456-7890&quot; aria-labelledby=&quot;lblNAPhoneNumber expNAPhoneNumber&quot; /&gt;
+        &lt;span id=&quot;expNAPhoneNumber&quot;&gt;###-###-####&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test North American Phone Number Pattern&quot; /&gt;
+&lt;/form&gt;
+&lt;/div&gt;</content>
   </entry>
   <entry>
     <title>HTML Characters</title>
     <link href="https://www.brianbaldock.com/tidbits/html-characters/" />
-    <updated>2024-03-27T00:00:00Z</updated>
+    <updated>2024-05-08T18:06:05Z</updated>
     <id>https://www.brianbaldock.com/tidbits/html-characters/</id>
     <content xml:lang="" type="html">&lt;style&gt;
     table {
@@ -2104,490 +2554,40 @@
 </content>
   </entry>
   <entry>
-    <title>Conversion Chart</title>
-    <link href="https://www.brianbaldock.com/tidbits/conversion-chart/" />
-    <updated>2024-03-26T00:00:00Z</updated>
-    <id>https://www.brianbaldock.com/tidbits/conversion-chart/</id>
-    <content xml:lang="" type="html">&lt;style&gt;
-    table {
-        position: relative;
-    }
-    thead th {
-        background-color: var(--color-bg);
-        position: sticky;
-        top: 0;
-    }
-    tbody &gt; tr:nth-child(8n) {
-        background-color: var(--color-bg-accent);
-        font-weight: var(--font-bold);
-    }
-&lt;/style&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Inch Fraction&lt;/th&gt;
-        &lt;th&gt;Inch Decimal&lt;/th&gt;
-        &lt;th&gt;Millimeters&lt;/th&gt;
-        &lt;th&gt;Points &lt;br /&gt;&lt;small&gt;72 per inch&lt;/small&gt;&lt;/th&gt;
-        &lt;th&gt;REM &lt;br /&gt;&lt;small&gt;(Base font of 16px)&lt;/small&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.015625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;0.3969&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;1.125&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.0938&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.03125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;0.7938&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;2.250&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.1875&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.046875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;1.1906&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;3.3749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.2813&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/16&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.0625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;1.5875&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;4.5&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.375&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;5/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.078125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;1.9844&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;5.625&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.4688&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.09375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;2.3813&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;6.750&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.5625&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;7/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.109375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;2.7781&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;7.8749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.6563&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/8&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;3.175&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;9&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.75&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;9/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.140625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;3.5719&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;10.125&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.8438&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;5/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.15625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;3.9688&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;11.250&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;0.9375&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;11/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.171875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;4.3656&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;12.3749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.0313&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/16&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.1875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;4.7625&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;13.5&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.125&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;13/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.203125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;5.15940&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;14.625&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.2188&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;7/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.21875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;5.5563&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;15.750&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.3125&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;15/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.234375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;5.9531&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;16.8749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.4063&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/4&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.25&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;6.35&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;18&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;17/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.265625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;6.7469&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;19.125&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.5938&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;9/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.28125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;7.1438&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;20.250&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.6875&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;19/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.296875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;7.5406&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;21.3749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.7813&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;5/16&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.3125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;7.9375&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;22.5&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.875&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;21/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.328125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;8.3344&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;23.625&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;1.9688&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;11/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.34375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;8.7313&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;24.750&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.0625&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;23/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.359375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;9.1281&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;25.8749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.1563&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/8&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;9.525&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;27&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.25&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;25/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.390625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;9.9219&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;28.125&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.3438&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;13/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.40625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;10.3188&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;29.250&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.4375&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;27/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.421875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;10.7156&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;30.3749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.5313&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;7/16&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.4375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;11.1125&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;31.5&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.625&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;29/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.453125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;11.5094&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;32.625&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.7188&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;15/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.46875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;11.9063&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;33.750&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.8125&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;31/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.484375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;12.3031&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;34.8749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;2.9063&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1/2&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.5&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;12.7&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;36&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;33/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.515625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;13.0969&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;37.125&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.0938&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;17/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.53125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;13.4938&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;38.250&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.1875&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;35/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.546875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;13.8906&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;39.3749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.2813&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;9/16&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.5625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;14.2875&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;40.5&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.375&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;37/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.578125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;14.6844&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;41.625&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.4688&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;19/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.59375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;15.0813&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;42.750&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.5625&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;39/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.609375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;15.4781&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;43.8749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.6563&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;5/8&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;15.8750&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;45&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.75&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;41/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.640625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;16.2719&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;46.125&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.8438&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;21/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.65625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;16.6688&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;47.250&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;3.9375&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;43/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.671875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;17.0656&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;48.3749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.0313&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;11/16&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.6875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;17.4625&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;49.5&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.125&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;45/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.703125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;17.8594&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;50.625&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.2188&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;23/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.71875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;18.2563&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;51.750&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.3125&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;47/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.734375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;18.6531&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;52.8749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.4063&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;3/4&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.75&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;19.05&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;54&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;49/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.765625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;19.4469&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;55.125&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.5938&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;25/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.78125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;19.8438&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;56.250&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.6875&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;51/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.796875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;20.2406&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;57.3749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.7813&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;13/16&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.8125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;20.6375&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;58.5&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.875&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;53/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.828125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;21.0344&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;59.625&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.9688&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;27/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.84375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;21.4313&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;60.750&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.0625&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;55/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.859375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;21.8281&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;61.8749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.1563&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;7/8&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;22.225&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;63&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.25&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;57/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.890625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;22.6219&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;64.125&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.3438&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;29/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.90625&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;23.0188&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;65.250&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;4.4375&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;59/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.921875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;23.4156&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;66.3749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.5313&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;15/16&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.9375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;23.8125&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;67.5&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.625&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;61/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.953125&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;24.2094&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;68.625&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.7188&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;31/32&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.96875&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;24.6063&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;69.750&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.8125&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;63/64&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;0.984375&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;25.0031&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;70.8749&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;5.9063&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td data-label=&quot;Inch Fraction&quot;&gt;1&lt;/td&gt;
-        &lt;td data-label=&quot;Inch Decimal&quot;&gt;1&lt;/td&gt;
-        &lt;td data-label=&quot;Millimeters&quot;&gt;25.4&lt;/td&gt;
-        &lt;td data-label=&quot;Points&quot;&gt;72&lt;/td&gt;
-        &lt;td data-label=&quot;REM&quot;&gt;6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;/tbody&gt;	
-&lt;/table&gt;</content>
+    <title>Helpful Tools</title>
+    <link href="https://www.brianbaldock.com/tidbits/helpful-tools/" />
+    <updated>2024-05-08T18:05:50Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/helpful-tools/</id>
+    <content xml:lang="" type="html">&lt;h2 id=&quot;accessibility&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#accessibility&quot;&gt;Accessibility&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://colorable.jxnblk.com/&quot; rel=&quot;noopener&quot;&gt;Colorable&lt;/a&gt; - Quick tool to check contrast by Brent Jackson.&lt;/p&gt;
+&lt;h2 id=&quot;design&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#design&quot;&gt;Design&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://affinity.serif.com/&quot; rel=&quot;noopener&quot;&gt;Affinity&lt;/a&gt; - My new workflow revolves around the Affinity StudioLink functionality of Photo, Designer and Publisher by Serif.&lt;br /&gt;
+&lt;a href=&quot;https://coolors.co/?ref=5fec23f6bec2fe000a58509c&quot; rel=&quot;noopener&quot;&gt;Coolors&lt;/a&gt; [Affiliated Link] - Awesome colour palette generator and all around colour tool.&lt;br /&gt;
+&lt;a href=&quot;https://penpot.app/&quot; rel=&quot;noopener&quot;&gt;Penpot&lt;/a&gt; - An alternative to Figma, Sketch and XD.&lt;br /&gt;
+&lt;a href=&quot;https://open-foundry.com/&quot; rel=&quot;noopener&quot;&gt;Open Foundry&lt;/a&gt; - a free platform for curated open-source typefaces.&lt;br /&gt;
+&lt;a href=&quot;https://www.fluid-type-scale.com/&quot; rel=&quot;noopener&quot;&gt;Fluid Type Scale Calculator&lt;/a&gt; - Using CSS Clamp&lt;/p&gt;
+&lt;h2 id=&quot;email&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#email&quot;&gt;Email&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://mjml.io/&quot; rel=&quot;noopener&quot;&gt;MJML&lt;/a&gt; - Framework for building responsive emails.&lt;br /&gt;
+&lt;a href=&quot;https://www.caniemail.com/&quot; rel=&quot;noopener&quot;&gt;Can I Email&lt;/a&gt; - Email Client support tables for HTML/CSS features.&lt;/p&gt;
+&lt;h2 id=&quot;ideation&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#ideation&quot;&gt;Ideation&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://coggle.it/recommend/54108cd1434772e2240014d9&quot; rel=&quot;noopener&quot;&gt;Coggle&lt;/a&gt; [Affiliated Link] - I’ve been using Coggle for years now to get my ideas out on a mind map.&lt;/p&gt;
+&lt;h2 id=&quot;network&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#network&quot;&gt;Network&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://pi-hole.net/&quot; rel=&quot;noopener&quot;&gt;Pi-hole&lt;/a&gt; - A network-wide ad and tracking blocker that operates at the DNS level, efficiently blocking ads and improving internet browsing experience for all devices on the network.&lt;/p&gt;
+&lt;h2 id=&quot;stock-assets&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#stock-assets&quot;&gt;Stock Assets&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dimensions.com/&quot; rel=&quot;noopener&quot;&gt;Dimensions&lt;/a&gt; - Site dedicated to dimensioned drawings with standard measurements and sizes of everyday objects and spaces from around the world.&lt;br /&gt;
+&lt;a href=&quot;https://www.bluevertigo.com.ar/&quot; rel=&quot;noopener&quot;&gt;Blue Vertigo&lt;/a&gt; - An amazing list of digital assets from stock photos to pattern mixes.&lt;br /&gt;
+&lt;a href=&quot;https://unsplash.com/&quot; rel=&quot;noopener&quot;&gt;Unsplash&lt;/a&gt; - A source of freely usable images by creators. You will have seen several on my site.&lt;/p&gt;
+&lt;h2 id=&quot;web-development&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#web-development&quot;&gt;Web Development&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://jakearchibald.github.io/svgomg/&quot; rel=&quot;noopener&quot;&gt;SVGOMG&lt;/a&gt; - Jake Archibald’s robust SVG tool. I’ve used this a lot throughout most of my projects. Big Thanks to Jake!&lt;br /&gt;
+&lt;a href=&quot;https://caniuse.com/&quot; rel=&quot;noopener&quot;&gt;Can I Use&lt;/a&gt; - Browser support tables for modern web technologies.&lt;br /&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; rel=&quot;noopener&quot;&gt;Mozilla Developer Network&lt;/a&gt; - Web documents for CSS, HTML, JavaScript and more.&lt;br /&gt;
+&lt;a href=&quot;https://regexr.com/&quot; rel=&quot;noopener&quot;&gt;RegExr&lt;/a&gt; - a gskinner tool that is super useful for those times you are trying to crack a RegEx issue.&lt;/p&gt;
+</content>
   </entry>
   <entry>
     <title>Business Card Sizes</title>
     <link href="https://www.brianbaldock.com/tidbits/business-card-sizes/" />
-    <updated>2024-03-26T00:00:00Z</updated>
+    <updated>2024-05-08T18:05:32Z</updated>
     <id>https://www.brianbaldock.com/tidbits/business-card-sizes/</id>
     <content xml:lang="" type="html">
 &lt;style&gt;
@@ -2734,5 +2734,25 @@
     &lt;/tr&gt;
     &lt;/tbody&gt;
 &lt;/table&gt;	</content>
+  </entry>
+  <entry>
+    <title>Command Lines</title>
+    <link href="https://www.brianbaldock.com/tidbits/command-lines/" />
+    <updated>2024-05-08T18:05:13Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/command-lines/</id>
+    <content xml:lang="" type="html">
+&lt;p&gt;I don&#39;t think there&#39;s a day where I haven&#39;t used a command line to do something a little extra or get behind the &lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; to complete tasks that developers didn&#39;t make straightforward for users. Sometimes, you don&#39;t want to give full control to a general user, but it would be nice to have a power user overlay in addition to the standard actions available to users. Here are some commands I use frequently throughout my days on the computer.&lt;/p&gt;
+
+&lt;h2&gt;PowerShell&lt;/h2&gt;
+
+&lt;h2&gt;Windows/DOS&lt;/h2&gt;
+
+&lt;h2&gt;Bash&lt;/h2&gt;
+
+&lt;h2&gt;Linux&lt;/h2&gt;
+
+&lt;h2&gt;Mac OS&lt;/h2&gt;
+    &lt;code&gt;CMD + i&lt;/code&gt; - I always need to know the property of a file and this is my go to.
+</content>
   </entry>
 </feed>

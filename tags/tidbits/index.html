@@ -39,7 +39,7 @@
 
 <!--  inline blogpost schema  -->
 
-<link rel="stylesheet" href="/assets/css/global.css?8c2f-f477-12a3" />
+<link rel="stylesheet" href="/assets/css/global.css?77cf-847e-2dbc" />
 <!-- preloads -->
 <link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Medium.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Bold.woff2" as="font" type="font/woff2" crossorigin />
@@ -47,12 +47,12 @@
 <!-- defered js  -->
 
 <!-- masonry fallback, if true in frontmatter -->
-<script src="/assets/scripts/masonry.js?8c2f-f477-12a3" defer></script>
+<script src="/assets/scripts/masonry.js?77cf-847e-2dbc" defer></script>
 
 
 
 <!-- menu drawer js, if true in meta -->
-<script src="/assets/scripts/nav-drawer.js?8c2f-f477-12a3" defer></script>
+<script src="/assets/scripts/nav-drawer.js?77cf-847e-2dbc" defer></script>
 
 
 <!-- everything else: meta tags, icons, open graph etc.  -->
@@ -111,9 +111,17 @@
 
 <style>
   @media print {
-    body::after {
-      content: url("https://chart.googleapis.com/chart?cht=qr&chs=177x177&choe=UTF-8&chld=H&chl=https://www.brianbaldock.com/tags/tidbits/");
+    h1::before {
+      content: 'brianbaldock.com';
+      position: absolute;
+      inset-block-start: 3rem;
+      inset-inline-end: -2.75rem;
+      font-size: var(--size-step-min-2);
+      font-weight: var(--font-medium);
+      transform: rotate(90deg);
+      z-index: 100;
     }
+
   }
 </style>
 </head>
@@ -208,14 +216,40 @@
   <div class="flow">
     
       <h2>
+        <a href="/tidbits/command-lines/">Command Lines</a>
+      </h2>
+    
+    <div class="cluster">
+      <span class="text-step-min-1">
+        
+        <time datetime="2024-05-08T18:05:13.274Z">
+  May 8, 2024
+</time>
+
+        
+      </span>
+    </div>
+    <p>There always seems to be a command line you forget or need but can&#39;t remember how it was formatted.</p>
+  </div>
+</li>
+ 
+	<!-- activate tags -->
+	
+	<!-- set heading context -->
+	
+	<!-- card -->
+	<li class="card">
+  <div class="flow">
+    
+      <h2>
         <a href="/tidbits/business-card-sizes/">Business Card Sizes</a>
       </h2>
     
     <div class="cluster">
       <span class="text-step-min-1">
         
-        <time datetime="2024-03-26T00:00:00.000Z">
-  March 25, 2024
+        <time datetime="2024-05-08T18:05:32.793Z">
+  May 8, 2024
 </time>
 
         
@@ -234,66 +268,14 @@
   <div class="flow">
     
       <h2>
-        <a href="/tidbits/conversion-chart/">Conversion Chart</a>
-      </h2>
-    
-    <div class="cluster">
-      <span class="text-step-min-1">
-        
-        <time datetime="2024-03-26T00:00:00.000Z">
-  March 25, 2024
-</time>
-
-        
-      </span>
-    </div>
-    <p>A useful conversion chart of measurements that have helped me with print and web work over the years</p>
-  </div>
-</li>
- 
-	<!-- activate tags -->
-	
-	<!-- set heading context -->
-	
-	<!-- card -->
-	<li class="card">
-  <div class="flow">
-    
-      <h2>
-        <a href="/tidbits/html-characters/">HTML Characters</a>
-      </h2>
-    
-    <div class="cluster">
-      <span class="text-step-min-1">
-        
-        <time datetime="2024-03-27T00:00:00.000Z">
-  March 26, 2024
-</time>
-
-        
-      </span>
-    </div>
-    <p>List of HTML Character Codes for Reference</p>
-  </div>
-</li>
- 
-	<!-- activate tags -->
-	
-	<!-- set heading context -->
-	
-	<!-- card -->
-	<li class="card">
-  <div class="flow">
-    
-      <h2>
         <a href="/tidbits/helpful-tools/">Helpful Tools</a>
       </h2>
     
     <div class="cluster">
       <span class="text-step-min-1">
         
-        <time datetime="2024-04-17T22:02:26.841Z">
-  April 17, 2024
+        <time datetime="2024-05-08T18:05:50.762Z">
+  May 8, 2024
 </time>
 
         
@@ -312,20 +294,20 @@
   <div class="flow">
     
       <h2>
-        <a href="/tidbits/pitch-conversions/">Pitch Conversions</a>
+        <a href="/tidbits/html-characters/">HTML Characters</a>
       </h2>
     
     <div class="cluster">
       <span class="text-step-min-1">
         
-        <time datetime="2024-04-25T00:00:00.000Z">
-  April 24, 2024
+        <time datetime="2024-05-08T18:06:05.321Z">
+  May 8, 2024
 </time>
 
         
       </span>
     </div>
-    <p>List of useful pitch conversions for threaded items</p>
+    <p>List of HTML Character Codes for Reference</p>
   </div>
 </li>
  
@@ -344,14 +326,66 @@
     <div class="cluster">
       <span class="text-step-min-1">
         
-        <time datetime="2024-05-07T00:00:00.000Z">
-  May 6, 2024
+        <time datetime="2024-05-08T18:06:14.193Z">
+  May 8, 2024
 </time>
 
         
       </span>
     </div>
     <p>As with most things RegEx you forget. Hopefully these will remind you.</p>
+  </div>
+</li>
+ 
+	<!-- activate tags -->
+	
+	<!-- set heading context -->
+	
+	<!-- card -->
+	<li class="card">
+  <div class="flow">
+    
+      <h2>
+        <a href="/tidbits/conversion-chart/">Conversion Chart</a>
+      </h2>
+    
+    <div class="cluster">
+      <span class="text-step-min-1">
+        
+        <time datetime="2024-05-08T18:06:26.281Z">
+  May 8, 2024
+</time>
+
+        
+      </span>
+    </div>
+    <p>A useful conversion chart of measurements that have helped me with print and web work over the years</p>
+  </div>
+</li>
+ 
+	<!-- activate tags -->
+	
+	<!-- set heading context -->
+	
+	<!-- card -->
+	<li class="card">
+  <div class="flow">
+    
+      <h2>
+        <a href="/tidbits/pitch-conversions/">Pitch Conversions</a>
+      </h2>
+    
+    <div class="cluster">
+      <span class="text-step-min-1">
+        
+        <time datetime="2024-05-08T18:06:35.610Z">
+  May 8, 2024
+</time>
+
+        
+      </span>
+    </div>
+    <p>List of useful pitch conversions for threaded items</p>
   </div>
 </li>
  

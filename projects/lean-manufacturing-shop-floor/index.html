@@ -39,7 +39,7 @@
 
 <!--  inline blogpost schema  -->
 
-<link rel="stylesheet" href="/assets/css/global.css?c92b-1ff8-5336" />
+<link rel="stylesheet" href="/assets/css/global.css?a7c1-13e2-9fef" />
 <!-- preloads -->
 <link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Medium.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Bold.woff2" as="font" type="font/woff2" crossorigin />
@@ -49,7 +49,7 @@
 
 
 <!-- menu drawer js, if true in meta -->
-<script src="/assets/scripts/nav-drawer.js?c92b-1ff8-5336" defer></script>
+<script src="/assets/scripts/nav-drawer.js?a7c1-13e2-9fef" defer></script>
 
 
 <!-- everything else: meta tags, icons, open graph etc.  -->
@@ -108,9 +108,17 @@
 
 <style>
   @media print {
-    body::after {
-      content: url("https://chart.googleapis.com/chart?cht=qr&chs=177x177&choe=UTF-8&chld=H&chl=https://www.brianbaldock.com/projects/lean-manufacturing-shop-floor/");
+    h1::before {
+      content: 'brianbaldock.com';
+      position: absolute;
+      inset-block-start: 3rem;
+      inset-inline-end: -2.75rem;
+      font-size: var(--size-step-min-2);
+      font-weight: var(--font-medium);
+      transform: rotate(90deg);
+      z-index: 100;
     }
+
   }
 </style>
 </head>
