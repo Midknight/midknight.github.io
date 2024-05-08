@@ -6,12 +6,184 @@
   <link href="https://www.brianbaldock.com/tidbit-feed.xml" rel="self" />
   <link href="https://www.brianbaldock.com/" />
   
-  <updated>2024-04-25T00:00:00Z</updated>
+  <updated>2024-05-07T00:00:00Z</updated>
   <id>https://www.brianbaldock.com/</id>
   <author>
     <name>Brian Baldock</name>
     <email>bbaldock04@hotmail.com</email>
   </author>
+  <entry>
+    <title>HTML5 Input Patterns</title>
+    <link href="https://www.brianbaldock.com/tidbits/html5-input-patterns/" />
+    <updated>2024-05-07T00:00:00Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/html5-input-patterns/</id>
+    <content xml:lang="" type="html">
+&lt;style&gt;
+    form {
+        border-block-start: 1px solid var(--color-bg-accent);
+    }
+&lt;/style&gt;
+
+&lt;p&gt;The patterns presented here are a compilation gathered from blog posts and websites, offering solutions and troubleshooting for regular expressions (RegEx) in various input fields.&lt;/p&gt;
+&lt;p&gt;Regarding email addresses, it&#39;s advisable to rely on browser capabilities for validation, as discerning their complexity is best suited for developers, allowing browsers to integrate it into their validation and security libraries.&lt;/p&gt;
+
+&lt;div class=&quot;stack flow&quot;&gt;
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;basic-password&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#basic-password&quot; class=&quot;heading-anchor&quot;&gt;Basic Password&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;This pattern looks for the basics in password character combinations.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;^(?=.*&#92;d)(?=.*[a-z])(?=.*[A-Z])(?!.*&#92;s).*$&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblPassword1&quot; for=&quot;txtPassword1&quot;&gt;Password&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtPassword1&quot; name=&quot;txtPassword1&quot; type=&quot;password&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;^(?=.*&#92;d)(?=.*[a-z])(?=.*[A-Z])(?!.*&#92;s).*$&quot; placeholder=&quot;Example: PassWord1&quot; aria-labelledby=&quot;lblPassword1 expPassword1&quot; /&gt;
+        &lt;span id=&quot;expPassword1&quot;&gt;Uppercase, Lowercase, and Numbers&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Test Basic Password Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;not-so-basic-password&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#not-so-basic-password&quot; class=&quot;heading-anchor&quot;&gt;Not so basic password&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;This pattern incorporates special characters, and a minimum of 10 characters.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;(?=^.{10,}$)((?=.*&#92;d)|(?=.*&#92;W+))(?![.&#92;n])(?=.*[A-Z])(?=.*[a-z]).*$&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblPassword2&quot; for=&quot;txtPassword2&quot;&gt;Password&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtPassword2&quot; name=&quot;txtPassword2&quot; type=&quot;password&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(?=^.{10,}$)((?=.*&#92;d)|(?=.*&#92;W+))(?![.&#92;n])(?=.*[A-Z])(?=.*[a-z]).*$&quot; placeholder=&quot;Example: PassWord$1&quot; aria-labelledby=&quot;lblPassword2 expPassword2&quot; /&gt;
+        &lt;span id=&quot;expPassword2&quot;&gt;Uppercase, Lowercase, Number/Special Characters and a Minimum of 10 Characters&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Not so basic password Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;alpha-numeric&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#alpha-numeric&quot; class=&quot;heading-anchor&quot;&gt;Alpha Numeric&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Upper or lower case letters and numbers that&#39;s it.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;[a-zA-Z0-9]+&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblAlphaNumeric&quot; for=&quot;txtAlphaNumeric&quot;&gt;Alpha Numeric&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtAlphaNumeric&quot; name=&quot;txtAlphaNumeric&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[a-zA-Z0-9]+&quot; placeholder=&quot;Example: AlphaNumeric1234&quot; aria-labelledby=&quot;lblAlphaNumeric expAlphaNumeric&quot; /&gt;
+        &lt;span id=&quot;expAlphaNumeric&quot;&gt;Uppercase, Lowercase, and Numbers&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Alpha Numeric Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;username&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#username&quot; class=&quot;heading-anchor&quot;&gt;Username&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;A pattern to ensure a username is within 2 - 20 characters long with upper/lower case alpha numeric characters, hyphen, underscore or period in it.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;^[a-zA-Z][a-zA-Z0-9-_&#92;.]{1,20}$&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblUsername&quot; for=&quot;txtUsername&quot;&gt;Username&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtUsername&quot; name=&quot;txtUsername&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;^[a-zA-Z][a-zA-Z0-9-_&#92;.]{1,20}$&quot; placeholder=&quot;Example: Username_was-here.1&quot; aria-labelledby=&quot;lblUsername expUsername&quot; /&gt;
+        &lt;span id=&quot;expUsername&quot;&gt;2 - 20 Characters including hyphen, underscore and period&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Username Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;us-postal-zipcode&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#us-postal-zipcode&quot; class=&quot;heading-anchor&quot;&gt;US Postal Zipcode&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Pattern to quickly check against the US Postal System pattern.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;(&#92;d{5}([&#92;-]&#92;d{4})?)&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblUSPostalCode&quot; for=&quot;txtUSPostalCode&quot;&gt;United States Zipcode&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtUSPostalCode&quot; name=&quot;txtUSPostalCode&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(&#92;d{5}([&#92;-]&#92;d{4})?)&quot; placeholder=&quot;Example: 50212&quot; aria-labelledby=&quot;lblUSPostalCode expUSPostalCode&quot; /&gt;
+        &lt;span id=&quot;expUSPostalCode&quot;&gt;##### or #####-####&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test US Postal Code Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;canadian-postal-code&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#canadian-postal-code&quot; class=&quot;heading-anchor&quot;&gt;Canadian Postal Code&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Pattern to quickly check against the Canadian Postal System pattern.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblCANPostalCode&quot; for=&quot;txtCANPostalCode&quot;&gt;Canadian Postal Code&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtCANPostalCode&quot; name=&quot;txtCANPostalCode&quot; type=&quot;text&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]&quot; placeholder=&quot;Example: H0H 0H0&quot; aria-labelledby=&quot;lblCANPostalCode expCANPostalCode&quot; /&gt;
+        &lt;span id=&quot;expCANPostalCode&quot;&gt;A#A #A#&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Canadian Postal Code Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;numeric-postal-code&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#numeric-postal-code&quot; class=&quot;heading-anchor&quot;&gt;Numeric Postal Code&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;This is a fairly generic pattern for several countries out there that don&#39;t have anything overly complicated with their postal system.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;[0-9]{4}&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblNumericPostalCode&quot; for=&quot;txtNumericPostalCode&quot;&gt;Numeric Postal Code&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtNumericPostalCode&quot; name=&quot;txtNumericPostalCode&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[0-9]{4}&quot; placeholder=&quot;Example: 1234&quot; aria-labelledby=&quot;lblNumericPostalCode expNumericPostalCode&quot; /&gt;
+        &lt;span id=&quot;expNumericPostalCode&quot;&gt;####&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Numeric Postal Code Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;basic-date&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#basic-date&quot; class=&quot;heading-anchor&quot;&gt;Basic Date&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Checks to ensure its year, month, date with the corresponding possible values.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblBasicDate&quot; for=&quot;txtBasicDate&quot;&gt;Basic Date&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtBasicDate&quot; name=&quot;txtBasicDate&quot; type=&quot;date&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])&quot; placeholder=&quot;Example: 2024-05-06&quot; aria-labelledby=&quot;lblBasicDate expBasicDate&quot; /&gt;
+        &lt;span id=&quot;expBasicDate&quot;&gt;YYYY-MM-DD&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Basic Date Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;full-date-validation&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#full-date-validation&quot; class=&quot;heading-anchor&quot;&gt;Full Date Validation&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;This date pattern incorporates year restriction, and checks against leap year.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;(?:18|19|20)(?:(?:[13579][26]|[02468][048])-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))|(?:[0-9]{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31)))&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblFullDateValidation&quot; for=&quot;txtFullDateValidation&quot;&gt;Full Date Validation&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtFullDateValidation&quot; name=&quot;txtFullDateValidation&quot; type=&quot;date&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(?:18|19|20)(?:(?:[13579][26]|[02468][048])-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))|(?:[0-9]{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31)))&quot; placeholder=&quot;Example: 2024-02-29&quot; aria-labelledby=&quot;lblFullDateValidation expFullDateValidation&quot; /&gt;
+        &lt;span id=&quot;expFullDateValidation&quot;&gt;YYYY-MM-DD&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Full Date Validation Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;time&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#time&quot; class=&quot;heading-anchor&quot;&gt;Time&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Pattern to ensure valid time is recorded.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblTime&quot; for=&quot;txtTime&quot;&gt;Time&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtTime&quot; name=&quot;txtTime&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}&quot; placeholder=&quot;Example: 12:34:56&quot; aria-labelledby=&quot;lblTime expTime&quot; /&gt;
+        &lt;span id=&quot;expTime&quot;&gt;hh:mm:ss&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Time Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;price&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#price&quot; class=&quot;heading-anchor&quot;&gt;Price&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Pattern to ensure a proper price is entered with dollars and cents to the nearest two decimal places.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;&#92;d+(&#92;.&#92;d{2})?&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblPrice&quot; for=&quot;txtPrice&quot;&gt;Price&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtPrice&quot; name=&quot;txtPrice&quot; type=&quot;text&quot; inputmode=&quot;decimal&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;&#92;d+(&#92;.&#92;d{2})?&quot; placeholder=&quot;Example: 1.49&quot; aria-labelledby=&quot;lblPrice expPrice&quot; /&gt;
+        &lt;span id=&quot;expPrice&quot;&gt;#.##&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test Price Pattern&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form onsubmit=&quot;alert(&#39;Test worked&#39;);return false;&quot;&gt;
+    &lt;h2 id=&quot;north-american-phone-number&quot;&gt;&lt;a href=&quot;https://www.brianbaldock.com/tidbits/html5-input-patterns/#north-american-phone-number&quot; class=&quot;heading-anchor&quot;&gt;North American Phone Number&lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;Phone Number pattern for Canada and the US.&lt;/p&gt;
+    &lt;p&gt;Pattern: &lt;code&gt;&#92;d{3}[&#92;-]&#92;d{3}[&#92;-]&#92;d{4}&lt;/code&gt;&lt;/p&gt;
+    &lt;label id=&quot;lblNAPhoneNumber&quot; for=&quot;txtNAPhoneNumber&quot;&gt;North American Phone Number&lt;/label&gt;
+    &lt;span&gt;
+        &lt;input id=&quot;txtNAPhoneNumber&quot; name=&quot;txtNAPhoneNumber&quot; type=&quot;text&quot; inputmode=&quot;tel&quot; required=&quot;&quot; aria-required=&quot;true&quot; value=&quot;&quot; pattern=&quot;&#92;d{3}[&#92;-]&#92;d{3}[&#92;-]&#92;d{4}&quot; placeholder=&quot;Example: 123-456-7890&quot; aria-labelledby=&quot;lblNAPhoneNumber expNAPhoneNumber&quot; /&gt;
+        &lt;span id=&quot;expNAPhoneNumber&quot;&gt;###-###-####&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Test North American Phone Number Pattern&quot; /&gt;
+&lt;/form&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Pitch Conversions</title>
     <link href="https://www.brianbaldock.com/tidbits/pitch-conversions/" />
@@ -400,6 +572,8 @@
 &lt;a href=&quot;https://www.caniemail.com/&quot; rel=&quot;noopener&quot;&gt;Can I Email&lt;/a&gt; - Email Client support tables for HTML/CSS features.&lt;/p&gt;
 &lt;h2 id=&quot;ideation&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#ideation&quot;&gt;Ideation&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://coggle.it/recommend/54108cd1434772e2240014d9&quot; rel=&quot;noopener&quot;&gt;Coggle&lt;/a&gt; - I’ve been using Coggle for years now to get my ideas out on a mind map.&lt;/p&gt;
+&lt;h2 id=&quot;network&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#network&quot;&gt;Network&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://pi-hole.net/&quot; rel=&quot;noopener&quot;&gt;Pi-hole&lt;/a&gt; - A network-wide ad and tracking blocker that operates at the DNS level, efficiently blocking ads and improving internet browsing experience for all devices on the network.&lt;/p&gt;
 &lt;h2 id=&quot;stock-assets&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#stock-assets&quot;&gt;Stock Assets&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.dimensions.com/&quot; rel=&quot;noopener&quot;&gt;Dimensions&lt;/a&gt; - Site dedicated to dimensioned drawings with standard measurements and sizes of everyday objects and spaces from around the world.&lt;br /&gt;
 &lt;a href=&quot;https://www.bluevertigo.com.ar/&quot; rel=&quot;noopener&quot;&gt;Blue Vertigo&lt;/a&gt; - An amazing list of digital assets from stock photos to pattern mixes.&lt;br /&gt;
@@ -407,7 +581,8 @@
 &lt;h2 id=&quot;web-development&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#web-development&quot;&gt;Web Development&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://jakearchibald.github.io/svgomg/&quot; rel=&quot;noopener&quot;&gt;SVGOMG&lt;/a&gt; - Jake Archibald’s robust SVG tool. I’ve used this a lot throughout most of my projects. Big Thanks to Jake!&lt;br /&gt;
 &lt;a href=&quot;https://caniuse.com/&quot; rel=&quot;noopener&quot;&gt;Can I Use&lt;/a&gt; - Browser support tables for modern web technologies.&lt;br /&gt;
-&lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; rel=&quot;noopener&quot;&gt;Mozilla Developer Network&lt;/a&gt; - Web documents for CSS, HTML, JavaScript and more.&lt;/p&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; rel=&quot;noopener&quot;&gt;Mozilla Developer Network&lt;/a&gt; - Web documents for CSS, HTML, JavaScript and more.&lt;br /&gt;
+&lt;a href=&quot;https://regexr.com/&quot; rel=&quot;noopener&quot;&gt;RegExr&lt;/a&gt; - a gskinner tool that is super useful for those times you are trying to crack a RegEx issue.&lt;/p&gt;
 </content>
   </entry>
   <entry>

@@ -8,7 +8,7 @@
     <!-- title -->
     <title>
       
-        Conversion Chart
+        HTML5 Input Patterns
       
       - Brian Baldock
     </title>
@@ -39,7 +39,7 @@
 
 <!--  inline blogpost schema  -->
 
-<link rel="stylesheet" href="/assets/css/global.css?b940-dac6-425e" />
+<link rel="stylesheet" href="/assets/css/global.css?8af7-9f9b-4466" />
 <!-- preloads -->
 <link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Medium.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/assets/fonts/claritycity/ClarityCity-Bold.woff2" as="font" type="font/woff2" crossorigin />
@@ -49,13 +49,13 @@
 
 
 <!-- menu drawer js, if true in meta -->
-<script src="/assets/scripts/nav-drawer.js?b940-dac6-425e" defer></script>
+<script src="/assets/scripts/nav-drawer.js?8af7-9f9b-4466" defer></script>
 
 
 <!-- everything else: meta tags, icons, open graph etc.  -->
-<base href="/tidbits/conversion-chart/" />
+<base href="/tidbits/html5-input-patterns/" />
 
-<meta name="description" content=" A useful conversion chart of measurements that have helped me with print and web work over the years " />
+<meta name="description" content=" As with most things RegEx you forget. Hopefully these will remind you. " />
 
 <meta name="theme-color" content="#353535" />
 <!-- Search Engines -->
@@ -71,7 +71,7 @@
 <meta name="view-transition" content="same-origin" />
 
 <!-- Helps prevent duplicate content issues -->
-<link rel="canonical" href="https://www.brianbaldock.com/tidbits/conversion-chart/" />
+<link rel="canonical" href="https://www.brianbaldock.com/tidbits/html5-input-patterns/" />
 
 <!-- Links to information about the author(s) of the document -->
 <link rel="author" href="humans.txt" />
@@ -82,14 +82,14 @@
 
 
 <!-- Open Graph meta  -->
-<meta property="og:url" content="https://www.brianbaldock.com/tidbits/conversion-chart/" />
+<meta property="og:url" content="https://www.brianbaldock.com/tidbits/html5-input-patterns/" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Conversion Chart" />
+<meta property="og:title" content="HTML5 Input Patterns" />
 <meta property="og:image" content="https://www.brianbaldock.com/assets/images/template/default-image.webp" />
 <meta property="og:image:alt" content="Visible content: My personal site, blog and repository of thought" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="675" />
-<meta property="og:description" content="A useful conversion chart of measurements that have helped me with print and web work over the years" />
+<meta property="og:description" content="As with most things RegEx you forget. Hopefully these will remind you." />
 <meta property="og:site_name" content="Brian Baldock" />
 <meta property="og:locale" content="en_CA" />
 <meta property="article:author" content="Brian Baldock" />
@@ -109,7 +109,7 @@
 <style>
   @media print {
     body::after {
-      content: url("https://chart.googleapis.com/chart?cht=qr&chs=177x177&choe=UTF-8&chld=H&chl=https://www.brianbaldock.com/tidbits/conversion-chart/");
+      content: url("https://chart.googleapis.com/chart?cht=qr&chs=177x177&choe=UTF-8&chld=H&chl=https://www.brianbaldock.com/tidbits/html5-input-patterns/");
     }
   }
 </style>
@@ -190,7 +190,7 @@
       <main id="main" class="flow | site-main" tabindex="-1">
 <article class="region blog">
   <div class="flow prose">
-    <h1 class="gradient-text-linear">Conversion Chart</h1>
+    <h1 class="gradient-text-linear">HTML5 Input Patterns</h1>
 
     
     
@@ -201,488 +201,179 @@
       
     </p>
 
-    <style>
-    table {
-        position: relative;
-    }
-    thead th {
-        background-color: var(--color-bg);
-        position: sticky;
-        top: 0;
-    }
-    tbody > tr:nth-child(8n) {
-        background-color: var(--color-bg-accent);
-        font-weight: var(--font-bold);
+    
+<style>
+    form {
+        border-block-start: 1px solid var(--color-bg-accent);
     }
 </style>
-<table>
-    <thead>
-    <tr>
-        <th>Inch Fraction</th>
-        <th>Inch Decimal</th>
-        <th>Millimeters</th>
-        <th>Points <br/><small>72 per inch</small></th>
-        <th>REM <br/><small>(Base font of 16px)</small></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td data-label="Inch Fraction">1/64</td>
-        <td data-label="Inch Decimal">0.015625</td>
-        <td data-label="Millimeters">0.3969</td>
-        <td data-label="Points">1.125</td>
-        <td data-label="REM">0.0938</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">1/32</td>
-        <td data-label="Inch Decimal">0.03125</td>
-        <td data-label="Millimeters">0.7938</td>
-        <td data-label="Points">2.250</td>
-        <td data-label="REM">0.1875</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">3/64</td>
-        <td data-label="Inch Decimal">0.046875</td>
-        <td data-label="Millimeters">1.1906</td>
-        <td data-label="Points">3.3749</td>
-        <td data-label="REM">0.2813</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">1/16</td>
-        <td data-label="Inch Decimal">0.0625</td>
-        <td data-label="Millimeters">1.5875</td>
-        <td data-label="Points">4.5</td>
-        <td data-label="REM">0.375</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">5/64</td>
-        <td data-label="Inch Decimal">0.078125</td>
-        <td data-label="Millimeters">1.9844</td>
-        <td data-label="Points">5.625</td>
-        <td data-label="REM">0.4688</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">3/32</td>
-        <td data-label="Inch Decimal">0.09375</td>
-        <td data-label="Millimeters">2.3813</td>
-        <td data-label="Points">6.750</td>
-        <td data-label="REM">0.5625</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">7/64</td>
-        <td data-label="Inch Decimal">0.109375</td>
-        <td data-label="Millimeters">2.7781</td>
-        <td data-label="Points">7.8749</td>
-        <td data-label="REM">0.6563</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">1/8</td>
-        <td data-label="Inch Decimal">0.125</td>
-        <td data-label="Millimeters">3.175</td>
-        <td data-label="Points">9</td>
-        <td data-label="REM">0.75</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">9/64</td>
-        <td data-label="Inch Decimal">0.140625</td>
-        <td data-label="Millimeters">3.5719</td>
-        <td data-label="Points">10.125</td>
-        <td data-label="REM">0.8438</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">5/32</td>
-        <td data-label="Inch Decimal">0.15625</td>
-        <td data-label="Millimeters">3.9688</td>
-        <td data-label="Points">11.250</td>
-        <td data-label="REM">0.9375</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">11/64</td>
-        <td data-label="Inch Decimal">0.171875</td>
-        <td data-label="Millimeters">4.3656</td>
-        <td data-label="Points">12.3749</td>
-        <td data-label="REM">1.0313</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">3/16</td>
-        <td data-label="Inch Decimal">0.1875</td>
-        <td data-label="Millimeters">4.7625</td>
-        <td data-label="Points">13.5</td>
-        <td data-label="REM">1.125</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">13/64</td>
-        <td data-label="Inch Decimal">0.203125</td>
-        <td data-label="Millimeters">5.15940</td>
-        <td data-label="Points">14.625</td>
-        <td data-label="REM">1.2188</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">7/32</td>
-        <td data-label="Inch Decimal">0.21875</td>
-        <td data-label="Millimeters">5.5563</td>
-        <td data-label="Points">15.750</td>
-        <td data-label="REM">1.3125</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">15/64</td>
-        <td data-label="Inch Decimal">0.234375</td>
-        <td data-label="Millimeters">5.9531</td>
-        <td data-label="Points">16.8749</td>
-        <td data-label="REM">1.4063</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">1/4</td>
-        <td data-label="Inch Decimal">0.25</td>
-        <td data-label="Millimeters">6.35</td>
-        <td data-label="Points">18</td>
-        <td data-label="REM">1.5</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">17/64</td>
-        <td data-label="Inch Decimal">0.265625</td>
-        <td data-label="Millimeters">6.7469</td>
-        <td data-label="Points">19.125</td>
-        <td data-label="REM">1.5938</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">9/32</td>
-        <td data-label="Inch Decimal">0.28125</td>
-        <td data-label="Millimeters">7.1438</td>
-        <td data-label="Points">20.250</td>
-        <td data-label="REM">1.6875</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">19/64</td>
-        <td data-label="Inch Decimal">0.296875</td>
-        <td data-label="Millimeters">7.5406</td>
-        <td data-label="Points">21.3749</td>
-        <td data-label="REM">1.7813</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">5/16</td>
-        <td data-label="Inch Decimal">0.3125</td>
-        <td data-label="Millimeters">7.9375</td>
-        <td data-label="Points">22.5</td>
-        <td data-label="REM">1.875</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">21/64</td>
-        <td data-label="Inch Decimal">0.328125</td>
-        <td data-label="Millimeters">8.3344</td>
-        <td data-label="Points">23.625</td>
-        <td data-label="REM">1.9688</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">11/32</td>
-        <td data-label="Inch Decimal">0.34375</td>
-        <td data-label="Millimeters">8.7313</td>
-        <td data-label="Points">24.750</td>
-        <td data-label="REM">2.0625</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">23/64</td>
-        <td data-label="Inch Decimal">0.359375</td>
-        <td data-label="Millimeters">9.1281</td>
-        <td data-label="Points">25.8749</td>
-        <td data-label="REM">2.1563</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">3/8</td>
-        <td data-label="Inch Decimal">0.375</td>
-        <td data-label="Millimeters">9.525</td>
-        <td data-label="Points">27</td>
-        <td data-label="REM">2.25</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">25/64</td>
-        <td data-label="Inch Decimal">0.390625</td>
-        <td data-label="Millimeters">9.9219</td>
-        <td data-label="Points">28.125</td>
-        <td data-label="REM">2.3438</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">13/32</td>
-        <td data-label="Inch Decimal">0.40625</td>
-        <td data-label="Millimeters">10.3188</td>
-        <td data-label="Points">29.250</td>
-        <td data-label="REM">2.4375</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">27/64</td>
-        <td data-label="Inch Decimal">0.421875</td>
-        <td data-label="Millimeters">10.7156</td>
-        <td data-label="Points">30.3749</td>
-        <td data-label="REM">2.5313</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">7/16</td>
-        <td data-label="Inch Decimal">0.4375</td>
-        <td data-label="Millimeters">11.1125</td>
-        <td data-label="Points">31.5</td>
-        <td data-label="REM">2.625</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">29/64</td>
-        <td data-label="Inch Decimal">0.453125</td>
-        <td data-label="Millimeters">11.5094</td>
-        <td data-label="Points">32.625</td>
-        <td data-label="REM">2.7188</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">15/32</td>
-        <td data-label="Inch Decimal">0.46875</td>
-        <td data-label="Millimeters">11.9063</td>
-        <td data-label="Points">33.750</td>
-        <td data-label="REM">2.8125</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">31/64</td>
-        <td data-label="Inch Decimal">0.484375</td>
-        <td data-label="Millimeters">12.3031</td>
-        <td data-label="Points">34.8749</td>
-        <td data-label="REM">2.9063</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">1/2</td>
-        <td data-label="Inch Decimal">0.5</td>
-        <td data-label="Millimeters">12.7</td>
-        <td data-label="Points">36</td>
-        <td data-label="REM">3</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">33/64</td>
-        <td data-label="Inch Decimal">0.515625</td>
-        <td data-label="Millimeters">13.0969</td>
-        <td data-label="Points">37.125</td>
-        <td data-label="REM">3.0938</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">17/32</td>
-        <td data-label="Inch Decimal">0.53125</td>
-        <td data-label="Millimeters">13.4938</td>
-        <td data-label="Points">38.250</td>
-        <td data-label="REM">3.1875</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">35/64</td>
-        <td data-label="Inch Decimal">0.546875</td>
-        <td data-label="Millimeters">13.8906</td>
-        <td data-label="Points">39.3749</td>
-        <td data-label="REM">3.2813</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">9/16</td>
-        <td data-label="Inch Decimal">0.5625</td>
-        <td data-label="Millimeters">14.2875</td>
-        <td data-label="Points">40.5</td>
-        <td data-label="REM">3.375</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">37/64</td>
-        <td data-label="Inch Decimal">0.578125</td>
-        <td data-label="Millimeters">14.6844</td>
-        <td data-label="Points">41.625</td>
-        <td data-label="REM">3.4688</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">19/32</td>
-        <td data-label="Inch Decimal">0.59375</td>
-        <td data-label="Millimeters">15.0813</td>
-        <td data-label="Points">42.750</td>
-        <td data-label="REM">3.5625</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">39/64</td>
-        <td data-label="Inch Decimal">0.609375</td>
-        <td data-label="Millimeters">15.4781</td>
-        <td data-label="Points">43.8749</td>
-        <td data-label="REM">3.6563</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">5/8</td>
-        <td data-label="Inch Decimal">0.625</td>
-        <td data-label="Millimeters">15.8750</td>
-        <td data-label="Points">45</td>
-        <td data-label="REM">3.75</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">41/64</td>
-        <td data-label="Inch Decimal">0.640625</td>
-        <td data-label="Millimeters">16.2719</td>
-        <td data-label="Points">46.125</td>
-        <td data-label="REM">3.8438</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">21/32</td>
-        <td data-label="Inch Decimal">0.65625</td>
-        <td data-label="Millimeters">16.6688</td>
-        <td data-label="Points">47.250</td>
-        <td data-label="REM">3.9375</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">43/64</td>
-        <td data-label="Inch Decimal">0.671875</td>
-        <td data-label="Millimeters">17.0656</td>
-        <td data-label="Points">48.3749</td>
-        <td data-label="REM">4.0313</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">11/16</td>
-        <td data-label="Inch Decimal">0.6875</td>
-        <td data-label="Millimeters">17.4625</td>
-        <td data-label="Points">49.5</td>
-        <td data-label="REM">4.125</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">45/64</td>
-        <td data-label="Inch Decimal">0.703125</td>
-        <td data-label="Millimeters">17.8594</td>
-        <td data-label="Points">50.625</td>
-        <td data-label="REM">4.2188</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">23/32</td>
-        <td data-label="Inch Decimal">0.71875</td>
-        <td data-label="Millimeters">18.2563</td>
-        <td data-label="Points">51.750</td>
-        <td data-label="REM">4.3125</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">47/64</td>
-        <td data-label="Inch Decimal">0.734375</td>
-        <td data-label="Millimeters">18.6531</td>
-        <td data-label="Points">52.8749</td>
-        <td data-label="REM">4.4063</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">3/4</td>
-        <td data-label="Inch Decimal">0.75</td>
-        <td data-label="Millimeters">19.05</td>
-        <td data-label="Points">54</td>
-        <td data-label="REM">4.5</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">49/64</td>
-        <td data-label="Inch Decimal">0.765625</td>
-        <td data-label="Millimeters">19.4469</td>
-        <td data-label="Points">55.125</td>
-        <td data-label="REM">4.5938</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">25/32</td>
-        <td data-label="Inch Decimal">0.78125</td>
-        <td data-label="Millimeters">19.8438</td>
-        <td data-label="Points">56.250</td>
-        <td data-label="REM">4.6875</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">51/64</td>
-        <td data-label="Inch Decimal">0.796875</td>
-        <td data-label="Millimeters">20.2406</td>
-        <td data-label="Inch Decimal">57.3749</td>
-        <td data-label="REM">4.7813</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">13/16</td>
-        <td data-label="Inch Decimal">0.8125</td>
-        <td data-label="Millimeters">20.6375</td>
-        <td data-label="Points">58.5</td>
-        <td data-label="REM">4.875</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">53/64</td>
-        <td data-label="Inch Decimal">0.828125</td>
-        <td data-label="Millimeters">21.0344</td>
-        <td data-label="Points">59.625</td>
-        <td data-label="REM">4.9688</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">27/32</td>
-        <td data-label="Inch Decimal">0.84375</td>
-        <td data-label="Millimeters">21.4313</td>
-        <td data-label="Points">60.750</td>
-        <td data-label="REM">5.0625</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">55/64</td>
-        <td data-label="Inch Decimal">0.859375</td>
-        <td data-label="Millimeters">21.8281</td>
-        <td data-label="Points">61.8749</td>
-        <td data-label="REM">5.1563</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">7/8</td>
-        <td data-label="Inch Decimal">0.875</td>
-        <td data-label="Millimeters">22.225</td>
-        <td data-label="Points">63</td>
-        <td data-label="REM">5.25</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">57/64</td>
-        <td data-label="Inch Decimal">0.890625</td>
-        <td data-label="Millimeters">22.6219</td>
-        <td data-label="Points">64.125</td>
-        <td data-label="REM">5.3438</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">29/32</td>
-        <td data-label="Inch Decimal">0.90625</td>
-        <td data-label="Millimeters">23.0188</td>
-        <td data-label="Points">65.250</td>
-        <td data-label="REM">4.4375</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">59/64</td>
-        <td data-label="Inch Decimal">0.921875</td>
-        <td data-label="Millimeters">23.4156</td>
-        <td data-label="Points">66.3749</td>
-        <td data-label="REM">5.5313</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">15/16</td>
-        <td data-label="Inch Decimal">0.9375</td>
-        <td data-label="Millimeters">23.8125</td>
-        <td data-label="Points">67.5</td>
-        <td data-label="REM">5.625</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">61/64</td>
-        <td data-label="Inch Decimal">0.953125</td>
-        <td data-label="Millimeters">24.2094</td>
-        <td data-label="Points">68.625</td>
-        <td data-label="REM">5.7188</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">31/32</td>
-        <td data-label="Inch Decimal">0.96875</td>
-        <td data-label="Millimeters">24.6063</td>
-        <td data-label="Points">69.750</td>
-        <td data-label="REM">5.8125</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">63/64</td>
-        <td data-label="Inch Decimal">0.984375</td>
-        <td data-label="Millimeters">25.0031</td>
-        <td data-label="Points">70.8749</td>
-        <td data-label="REM">5.9063</td>
-    </tr>
-    <tr>
-        <td data-label="Inch Fraction">1</td>
-        <td data-label="Inch Decimal">1</td>
-        <td data-label="Millimeters">25.4</td>
-        <td data-label="Points">72</td>
-        <td data-label="REM">6</td>
-    </tr>
-    </tbody>	
-</table>
+
+<p>The patterns presented here are a compilation gathered from blog posts and websites, offering solutions and troubleshooting for regular expressions (RegEx) in various input fields.</p>
+<p>Regarding email addresses, it's advisable to rely on browser capabilities for validation, as discerning their complexity is best suited for developers, allowing browsers to integrate it into their validation and security libraries.</p>
+
+<div class="stack flow">
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="basic-password"><a href="#basic-password" class="heading-anchor">Basic Password</a></h2>
+    <p>This pattern looks for the basics in password character combinations.</p>
+    <p>Pattern: <code>^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$</code></p>
+    <label id="lblPassword1" for="txtPassword1">Password</label>
+    <span>
+        <input id="txtPassword1" name="txtPassword1" type="password" required="" aria-required="true" value="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="Example: PassWord1" aria-labelledby="lblPassword1 expPassword1" />
+        <span id="expPassword1">Uppercase, Lowercase, and Numbers</span>
+    </span>
+    <input type="submit" value="Test Basic Password Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="not-so-basic-password"><a href="#not-so-basic-password" class="heading-anchor">Not so basic password</a></h2>
+    <p>This pattern incorporates special characters, and a minimum of 10 characters.</p>
+    <p>Pattern: <code>(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$</code></p>
+    <label id="lblPassword2" for="txtPassword2">Password</label>
+    <span>
+        <input id="txtPassword2" name="txtPassword2" type="password" required="" aria-required="true" value="" pattern="(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="Example: PassWord$1" aria-labelledby="lblPassword2 expPassword2" />
+        <span id="expPassword2">Uppercase, Lowercase, Number/Special Characters and a Minimum of 10 Characters</span>
+    </span>
+
+    <input type="submit" value="Test Not so basic password Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="alpha-numeric"><a href="#alpha-numeric" class="heading-anchor">Alpha Numeric</a></h2>
+    <p>Upper or lower case letters and numbers that's it.</p>
+    <p>Pattern: <code>[a-zA-Z0-9]+</code></p>
+    <label id="lblAlphaNumeric" for="txtAlphaNumeric">Alpha Numeric</label>
+    <span>
+        <input id="txtAlphaNumeric" name="txtAlphaNumeric" type="text" required="" aria-required="true" value="" pattern="[a-zA-Z0-9]+" placeholder="Example: AlphaNumeric1234" aria-labelledby="lblAlphaNumeric expAlphaNumeric" />
+        <span id="expAlphaNumeric">Uppercase, Lowercase, and Numbers</span>
+    </span>
+
+    <input type="submit" value="Test Alpha Numeric Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="username"><a href="#username" class="heading-anchor">Username</a></h2>
+    <p>A pattern to ensure a username is within 2 - 20 characters long with upper/lower case alpha numeric characters, hyphen, underscore or period in it.</p>
+    <p>Pattern: <code>^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$</code></p>
+    <label id="lblUsername" for="txtUsername">Username</label>
+    <span>
+        <input id="txtUsername" name="txtUsername" type="text" required="" aria-required="true" value="" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="Example: Username_was-here.1" aria-labelledby="lblUsername expUsername" />
+        <span id="expUsername">2 - 20 Characters including hyphen, underscore and period</span>
+    </span>
+
+    <input type="submit" value="Test Username Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="us-postal-zipcode"><a href="#us-postal-zipcode" class="heading-anchor">US Postal Zipcode</a></h2>
+    <p>Pattern to quickly check against the US Postal System pattern.</p>
+    <p>Pattern: <code>(\d{5}([\-]\d{4})?)</code></p>
+    <label id="lblUSPostalCode" for="txtUSPostalCode">United States Zipcode</label>
+    <span>
+        <input id="txtUSPostalCode" name="txtUSPostalCode" type="text" inputmode="numeric" required="" aria-required="true" value="" pattern="(\d{5}([\-]\d{4})?)" placeholder="Example: 50212" aria-labelledby="lblUSPostalCode expUSPostalCode" />
+        <span id="expUSPostalCode">##### or #####-####</span>
+    </span>
+
+    <input type="submit" value="Test US Postal Code Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="canadian-postal-code"><a href="#canadian-postal-code" class="heading-anchor">Canadian Postal Code</a></h2>
+    <p>Pattern to quickly check against the Canadian Postal System pattern.</p>
+    <p>Pattern: <code>[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]</code></p>
+    <label id="lblCANPostalCode" for="txtCANPostalCode">Canadian Postal Code</label>
+    <span>
+        <input id="txtCANPostalCode" name="txtCANPostalCode" type="text" required="" aria-required="true" value="" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="Example: H0H 0H0" aria-labelledby="lblCANPostalCode expCANPostalCode" />
+        <span id="expCANPostalCode">A#A #A#</span>
+    </span>
+
+    <input type="submit" value="Test Canadian Postal Code Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="numeric-postal-code"><a href="#numeric-postal-code" class="heading-anchor">Numeric Postal Code</a></h2>
+    <p>This is a fairly generic pattern for several countries out there that don't have anything overly complicated with their postal system.</p>
+    <p>Pattern: <code>[0-9]{4}</code></p>
+    <label id="lblNumericPostalCode" for="txtNumericPostalCode">Numeric Postal Code</label>
+    <span>
+        <input id="txtNumericPostalCode" name="txtNumericPostalCode" type="text" inputmode="numeric" required="" aria-required="true" value="" pattern="[0-9]{4}" placeholder="Example: 1234" aria-labelledby="lblNumericPostalCode expNumericPostalCode" />
+        <span id="expNumericPostalCode">####</span>
+    </span>
+
+    <input type="submit" value="Test Numeric Postal Code Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="basic-date"><a href="#basic-date" class="heading-anchor">Basic Date</a></h2>
+    <p>Checks to ensure its year, month, date with the corresponding possible values.</p>
+    <p>Pattern: <code>[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])</code></p>
+    <label id="lblBasicDate" for="txtBasicDate">Basic Date</label>
+    <span>
+        <input id="txtBasicDate" name="txtBasicDate" type="date" required="" aria-required="true" value="" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" placeholder="Example: 2024-05-06" aria-labelledby="lblBasicDate expBasicDate" />
+        <span id="expBasicDate">YYYY-MM-DD</span>
+    </span>
+
+    <input type="submit" value="Test Basic Date Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="full-date-validation"><a href="#full-date-validation" class="heading-anchor">Full Date Validation</a></h2>
+    <p>This date pattern incorporates year restriction, and checks against leap year.</p>
+    <p>Pattern: <code>(?:18|19|20)(?:(?:[13579][26]|[02468][048])-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))|(?:[0-9]{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31)))</code></p>
+    <label id="lblFullDateValidation" for="txtFullDateValidation">Full Date Validation</label>
+    <span>
+        <input id="txtFullDateValidation" name="txtFullDateValidation" type="date" required="" aria-required="true" value="" pattern="(?:18|19|20)(?:(?:[13579][26]|[02468][048])-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))|(?:[0-9]{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31)))" placeholder="Example: 2024-02-29"  aria-labelledby="lblFullDateValidation expFullDateValidation" />
+        <span id="expFullDateValidation">YYYY-MM-DD</span>
+    </span>
+
+    <input type="submit" value="Test Full Date Validation Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="time"><a href="#time" class="heading-anchor">Time</a></h2>
+    <p>Pattern to ensure valid time is recorded.</p>
+    <p>Pattern: <code>(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}</code></p>
+    <label id="lblTime" for="txtTime">Time</label>
+    <span>
+        <input id="txtTime" name="txtTime" type="text" inputmode="numeric" required="" aria-required="true" value="" pattern="(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}" placeholder="Example: 12:34:56" aria-labelledby="lblTime expTime" />
+        <span id="expTime">hh:mm:ss</span>
+    </span>
+
+    <input type="submit" value="Test Time Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="price"><a href="#price" class="heading-anchor">Price</a></h2>
+    <p>Pattern to ensure a proper price is entered with dollars and cents to the nearest two decimal places.</p>
+    <p>Pattern: <code>\d+(\.\d{2})?</code></p>
+    <label id="lblPrice" for="txtPrice">Price</label>
+    <span>
+        <input id="txtPrice" name="txtPrice" type="text" inputmode="decimal" required="" aria-required="true" value="" pattern="\d+(\.\d{2})?" placeholder="Example: 1.49"  aria-labelledby="lblPrice expPrice" />
+        <span id="expPrice">#.##</span>
+    </span>
+
+    <input type="submit" value="Test Price Pattern">
+</form>
+
+<form onsubmit="alert('Test worked');return false;">
+    <h2 id="north-american-phone-number"><a href="#north-american-phone-number" class="heading-anchor">North American Phone Number</a></h2>
+    <p>Phone Number pattern for Canada and the US.</p>
+    <p>Pattern: <code>\d{3}[\-]\d{3}[\-]\d{4}</code></p>
+    <label id="lblNAPhoneNumber" for="txtNAPhoneNumber">North American Phone Number</label>
+    <span>
+        <input id="txtNAPhoneNumber" name="txtNAPhoneNumber" type="text" inputmode="tel" required="" aria-required="true" value="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Example: 123-456-7890" aria-labelledby="lblNAPhoneNumber expNAPhoneNumber" />
+        <span id="expNAPhoneNumber">###-###-####</span>
+    </span>
+
+    <input type="submit" value="Test North American Phone Number Pattern">
+</form>
+</div>
     
 
   </div>
 
   <!--  h-card infos: https://indieweb.org/authorship -->
   <div hidden class="h-entry">
-    <a class="u-url" href="https://www.brianbaldock.com/tidbits/conversion-chart/">Conversion Chart</a>
+    <a class="u-url" href="https://www.brianbaldock.com/tidbits/html5-input-patterns/">HTML5 Input Patterns</a>
     <a class="p-name u-url" rel="author" href="https://www.brianbaldock.com">Brian Baldock</a>
     <img class="u-author h-card" src="https://www.brianbaldock.com/favicon.png" alt="Brian Baldock" />
   </div>
