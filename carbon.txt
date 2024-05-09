@@ -1,5 +1,5 @@
 [upstream]
-providers = [{ domain = 'netlify.com', service = 'cdn' }]
+providers = [{ domain = 'github.com', service = 'paas' }]
 
 [org]
-credentials = []
+credentials = [{ domain = 'brianbaldock.com', doctype = 'webpage', url = 'https://www.brianbaldock.com/' }]

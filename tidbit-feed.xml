@@ -6,12 +6,83 @@
   <link href="https://www.brianbaldock.com/tidbit-feed.xml" rel="self" />
   <link href="https://www.brianbaldock.com/" />
   
-  <updated>2024-05-08T18:06:35Z</updated>
+  <updated>2024-05-09T03:09:05Z</updated>
   <id>https://www.brianbaldock.com/</id>
   <author>
     <name>Brian Baldock</name>
     <email>bbaldock04@hotmail.com</email>
   </author>
+  <entry>
+    <title>Command Lines and Shortcuts</title>
+    <link href="https://www.brianbaldock.com/tidbits/command-lines-and-shortcuts/" />
+    <updated>2024-05-09T03:09:05Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/command-lines-and-shortcuts/</id>
+    <content xml:lang="" type="html">
+&lt;p&gt;I don&#39;t think there&#39;s a day where I haven&#39;t used a command line to do something a little extra or get behind the &lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; to complete tasks that developers didn&#39;t make straightforward for users. Sometimes, you don&#39;t want to give full control to a general user, but it would be nice to have a power user overlay in addition to the standard actions available to users. Here are some commands I use frequently throughout my days on the computer.&lt;/p&gt;
+
+&lt;h2&gt;PowerShell&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;code&gt;winget upgrade&lt;/code&gt; - Lists all software Windows can update via powershell&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;winget upgrade --all&lt;/code&gt; - This will update every listed item in one fell swoop. No need for those pesky PC manager softwares out there.&lt;/li&gt;
+    &lt;/ol&gt;
+
+&lt;h2&gt;Windows&lt;/h2&gt;
+&lt;ol&gt;
+    &lt;li&gt;&lt;code&gt;Windows + v&lt;/code&gt; - With clipboard history enabled this brings up your history and you are able to pick and choose what to paste.
+        &lt;ul&gt;
+            &lt;li&gt;To activate. Press &lt;code&gt;Windows + i&lt;/code&gt;. Search for &lt;i&gt;Clipboard Setting&lt;/i&gt;. &lt;b&gt;Turn on&lt;/b&gt; clipboard history. Thank me with a &lt;a href=&quot;https://www.buymeacoffee.com/bdock&quot;&gt;coffee&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;Windows + arrow key&lt;/code&gt; - Quickly change where your application is positioned on the screen. Using the arrow keys while holding the Windows key will move the Application Window around.&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;Windows + shift + arrow key&lt;/code&gt; - &lt;b&gt;BONUS&lt;/b&gt; - By holding the Window key, Shift and pressing an arrow key you will move the application window to another monitor if you have multiple setup.&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;del /s /q /f /a ._*&lt;/code&gt; - To further help clean up the nuisance .DS_Store files from a Mac. Navigate to the directory and let this command fly!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Mac OS&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;code&gt;CMD + i&lt;/code&gt; - I always need to know the property of a file and this is my go to.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;find . -name &quot;.DS_Store&quot; -delete&lt;/code&gt; - Finds the annoying .DS_Store files and deletes them. If you transfer files you know what I am talking about!&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;find . -name &quot;.DS_Store&quot; -type f -delete&lt;/code&gt; - Exclude directories and filter only for files.&lt;/li&gt;
+    &lt;/ol&gt;</content>
+  </entry>
+  <entry>
+    <title>Helpful Tools</title>
+    <link href="https://www.brianbaldock.com/tidbits/helpful-tools/" />
+    <updated>2024-05-09T03:06:47Z</updated>
+    <id>https://www.brianbaldock.com/tidbits/helpful-tools/</id>
+    <content xml:lang="" type="html">&lt;h2 id=&quot;accessibility&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#accessibility&quot;&gt;Accessibility&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://colorable.jxnblk.com/&quot; rel=&quot;noopener&quot;&gt;Colorable&lt;/a&gt; - Quick tool to check contrast by Brent Jackson.&lt;/p&gt;
+&lt;h2 id=&quot;browser&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#browser&quot;&gt;Browser&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/new/&quot; rel=&quot;noopener&quot;&gt;Firefox&lt;/a&gt; - The one the only Mozilla Firefox. My browser of choice. I’ve been a fan for decades!&lt;/p&gt;
+&lt;h2 id=&quot;design&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#design&quot;&gt;Design&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://affinity.serif.com/&quot; rel=&quot;noopener&quot;&gt;Affinity&lt;/a&gt; - My new workflow revolves around the Affinity StudioLink functionality of Photo, Designer and Publisher by Serif.&lt;br /&gt;
+&lt;a href=&quot;https://coolors.co/?ref=5fec23f6bec2fe000a58509c&quot; rel=&quot;noopener&quot;&gt;Coolors&lt;/a&gt; [Affiliated Link] - Awesome colour palette generator and all around colour tool.&lt;br /&gt;
+&lt;a href=&quot;https://penpot.app/&quot; rel=&quot;noopener&quot;&gt;Penpot&lt;/a&gt; - An alternative to Figma, Sketch and XD.&lt;br /&gt;
+&lt;a href=&quot;https://open-foundry.com/&quot; rel=&quot;noopener&quot;&gt;Open Foundry&lt;/a&gt; - a free platform for curated open-source typefaces.&lt;/p&gt;
+&lt;h2 id=&quot;email&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#email&quot;&gt;Email&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://mjml.io/&quot; rel=&quot;noopener&quot;&gt;MJML&lt;/a&gt; - Framework for building responsive emails.&lt;br /&gt;
+&lt;a href=&quot;https://www.caniemail.com/&quot; rel=&quot;noopener&quot;&gt;Can I Email&lt;/a&gt; - Email Client support tables for HTML/CSS features.&lt;/p&gt;
+&lt;h2 id=&quot;ideation&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#ideation&quot;&gt;Ideation&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://coggle.it/recommend/54108cd1434772e2240014d9&quot; rel=&quot;noopener&quot;&gt;Coggle&lt;/a&gt; [Affiliated Link] - I’ve been using Coggle for years now to get my ideas out on a mind map.&lt;/p&gt;
+&lt;h2 id=&quot;network&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#network&quot;&gt;Network&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://pi-hole.net/&quot; rel=&quot;noopener&quot;&gt;Pi-hole&lt;/a&gt; - A network-wide ad and tracking blocker that operates at the DNS level, efficiently blocking ads and improving internet browsing experience for all devices on the network.&lt;/p&gt;
+&lt;h2 id=&quot;stock-assets&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#stock-assets&quot;&gt;Stock Assets&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dimensions.com/&quot; rel=&quot;noopener&quot;&gt;Dimensions&lt;/a&gt; - Site dedicated to dimensioned drawings with standard measurements and sizes of everyday objects and spaces from around the world.&lt;br /&gt;
+&lt;a href=&quot;https://www.bluevertigo.com.ar/&quot; rel=&quot;noopener&quot;&gt;Blue Vertigo&lt;/a&gt; - An amazing list of digital assets from stock photos to pattern mixes.&lt;br /&gt;
+&lt;a href=&quot;https://unsplash.com/&quot; rel=&quot;noopener&quot;&gt;Unsplash&lt;/a&gt; - A source of freely usable images by creators. You will have seen several on my site.&lt;/p&gt;
+&lt;h2 id=&quot;web-development&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#web-development&quot;&gt;Web Development&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://jakearchibald.github.io/svgomg/&quot; rel=&quot;noopener&quot;&gt;SVGOMG&lt;/a&gt; - Jake Archibald’s robust SVG tool. I’ve used this a lot throughout most of my projects. Big Thanks to Jake!&lt;br /&gt;
+&lt;a href=&quot;https://caniuse.com/&quot; rel=&quot;noopener&quot;&gt;Can I Use&lt;/a&gt; - Browser support tables for modern web technologies.&lt;br /&gt;
+&lt;a href=&quot;https://www.fluid-type-scale.com/&quot; rel=&quot;noopener&quot;&gt;Fluid Type Scale Calculator&lt;/a&gt; - Using CSS Clamp&lt;br /&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; rel=&quot;noopener&quot;&gt;Mozilla Developer Network&lt;/a&gt; - Web documents for CSS, HTML, JavaScript and more.&lt;br /&gt;
+&lt;a href=&quot;https://regexr.com/&quot; rel=&quot;noopener&quot;&gt;RegExr&lt;/a&gt; - a gskinner tool that is super useful for those times you are trying to crack a RegEx issue.&lt;/p&gt;
+&lt;h2 id=&quot;windows-software&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#windows-software&quot;&gt;Windows Software&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/windows/powertoys/&quot; rel=&quot;noopener&quot;&gt;PowerToys&lt;/a&gt; - Ever want to make your Windows installed the way you want it? I’ve used several of the PowerToys to change how my PC works. Color Picker, FancyZones, File Locksmith, Image Resizer, Keyboard Manager, PowerRename, and Screen Ruler.&lt;br /&gt;
+&lt;a href=&quot;https://learn.microsoft.com/en-us/sysinternals/&quot; rel=&quot;noopener&quot;&gt;Sysinternals&lt;/a&gt; - A good host of applications really.&lt;br /&gt;
+&lt;a href=&quot;https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns&quot; rel=&quot;noopener&quot;&gt;AutoRuns&lt;/a&gt; - Excellent software to see what’s running on your computer.&lt;br /&gt;
+&lt;a href=&quot;https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer&quot; rel=&quot;noopener&quot;&gt;Process Explorer&lt;/a&gt; - A bit better then Task Manager…&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Pitch Conversions</title>
     <link href="https://www.brianbaldock.com/tidbits/pitch-conversions/" />
@@ -2554,37 +2625,6 @@
 </content>
   </entry>
   <entry>
-    <title>Helpful Tools</title>
-    <link href="https://www.brianbaldock.com/tidbits/helpful-tools/" />
-    <updated>2024-05-08T18:05:50Z</updated>
-    <id>https://www.brianbaldock.com/tidbits/helpful-tools/</id>
-    <content xml:lang="" type="html">&lt;h2 id=&quot;accessibility&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#accessibility&quot;&gt;Accessibility&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://colorable.jxnblk.com/&quot; rel=&quot;noopener&quot;&gt;Colorable&lt;/a&gt; - Quick tool to check contrast by Brent Jackson.&lt;/p&gt;
-&lt;h2 id=&quot;design&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#design&quot;&gt;Design&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://affinity.serif.com/&quot; rel=&quot;noopener&quot;&gt;Affinity&lt;/a&gt; - My new workflow revolves around the Affinity StudioLink functionality of Photo, Designer and Publisher by Serif.&lt;br /&gt;
-&lt;a href=&quot;https://coolors.co/?ref=5fec23f6bec2fe000a58509c&quot; rel=&quot;noopener&quot;&gt;Coolors&lt;/a&gt; [Affiliated Link] - Awesome colour palette generator and all around colour tool.&lt;br /&gt;
-&lt;a href=&quot;https://penpot.app/&quot; rel=&quot;noopener&quot;&gt;Penpot&lt;/a&gt; - An alternative to Figma, Sketch and XD.&lt;br /&gt;
-&lt;a href=&quot;https://open-foundry.com/&quot; rel=&quot;noopener&quot;&gt;Open Foundry&lt;/a&gt; - a free platform for curated open-source typefaces.&lt;br /&gt;
-&lt;a href=&quot;https://www.fluid-type-scale.com/&quot; rel=&quot;noopener&quot;&gt;Fluid Type Scale Calculator&lt;/a&gt; - Using CSS Clamp&lt;/p&gt;
-&lt;h2 id=&quot;email&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#email&quot;&gt;Email&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://mjml.io/&quot; rel=&quot;noopener&quot;&gt;MJML&lt;/a&gt; - Framework for building responsive emails.&lt;br /&gt;
-&lt;a href=&quot;https://www.caniemail.com/&quot; rel=&quot;noopener&quot;&gt;Can I Email&lt;/a&gt; - Email Client support tables for HTML/CSS features.&lt;/p&gt;
-&lt;h2 id=&quot;ideation&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#ideation&quot;&gt;Ideation&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://coggle.it/recommend/54108cd1434772e2240014d9&quot; rel=&quot;noopener&quot;&gt;Coggle&lt;/a&gt; [Affiliated Link] - I’ve been using Coggle for years now to get my ideas out on a mind map.&lt;/p&gt;
-&lt;h2 id=&quot;network&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#network&quot;&gt;Network&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://pi-hole.net/&quot; rel=&quot;noopener&quot;&gt;Pi-hole&lt;/a&gt; - A network-wide ad and tracking blocker that operates at the DNS level, efficiently blocking ads and improving internet browsing experience for all devices on the network.&lt;/p&gt;
-&lt;h2 id=&quot;stock-assets&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#stock-assets&quot;&gt;Stock Assets&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dimensions.com/&quot; rel=&quot;noopener&quot;&gt;Dimensions&lt;/a&gt; - Site dedicated to dimensioned drawings with standard measurements and sizes of everyday objects and spaces from around the world.&lt;br /&gt;
-&lt;a href=&quot;https://www.bluevertigo.com.ar/&quot; rel=&quot;noopener&quot;&gt;Blue Vertigo&lt;/a&gt; - An amazing list of digital assets from stock photos to pattern mixes.&lt;br /&gt;
-&lt;a href=&quot;https://unsplash.com/&quot; rel=&quot;noopener&quot;&gt;Unsplash&lt;/a&gt; - A source of freely usable images by creators. You will have seen several on my site.&lt;/p&gt;
-&lt;h2 id=&quot;web-development&quot;&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;https://www.brianbaldock.com/tidbits/helpful-tools/#web-development&quot;&gt;Web Development&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://jakearchibald.github.io/svgomg/&quot; rel=&quot;noopener&quot;&gt;SVGOMG&lt;/a&gt; - Jake Archibald’s robust SVG tool. I’ve used this a lot throughout most of my projects. Big Thanks to Jake!&lt;br /&gt;
-&lt;a href=&quot;https://caniuse.com/&quot; rel=&quot;noopener&quot;&gt;Can I Use&lt;/a&gt; - Browser support tables for modern web technologies.&lt;br /&gt;
-&lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; rel=&quot;noopener&quot;&gt;Mozilla Developer Network&lt;/a&gt; - Web documents for CSS, HTML, JavaScript and more.&lt;br /&gt;
-&lt;a href=&quot;https://regexr.com/&quot; rel=&quot;noopener&quot;&gt;RegExr&lt;/a&gt; - a gskinner tool that is super useful for those times you are trying to crack a RegEx issue.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
     <title>Business Card Sizes</title>
     <link href="https://www.brianbaldock.com/tidbits/business-card-sizes/" />
     <updated>2024-05-08T18:05:32Z</updated>
@@ -2734,25 +2774,5 @@
     &lt;/tr&gt;
     &lt;/tbody&gt;
 &lt;/table&gt;	</content>
-  </entry>
-  <entry>
-    <title>Command Lines</title>
-    <link href="https://www.brianbaldock.com/tidbits/command-lines/" />
-    <updated>2024-05-08T18:05:13Z</updated>
-    <id>https://www.brianbaldock.com/tidbits/command-lines/</id>
-    <content xml:lang="" type="html">
-&lt;p&gt;I don&#39;t think there&#39;s a day where I haven&#39;t used a command line to do something a little extra or get behind the &lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; to complete tasks that developers didn&#39;t make straightforward for users. Sometimes, you don&#39;t want to give full control to a general user, but it would be nice to have a power user overlay in addition to the standard actions available to users. Here are some commands I use frequently throughout my days on the computer.&lt;/p&gt;
-
-&lt;h2&gt;PowerShell&lt;/h2&gt;
-
-&lt;h2&gt;Windows/DOS&lt;/h2&gt;
-
-&lt;h2&gt;Bash&lt;/h2&gt;
-
-&lt;h2&gt;Linux&lt;/h2&gt;
-
-&lt;h2&gt;Mac OS&lt;/h2&gt;
-    &lt;code&gt;CMD + i&lt;/code&gt; - I always need to know the property of a file and this is my go to.
-</content>
   </entry>
 </feed>
