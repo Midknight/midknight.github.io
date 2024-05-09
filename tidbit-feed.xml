@@ -6,7 +6,7 @@
   <link href="https://www.brianbaldock.com/tidbit-feed.xml" rel="self" />
   <link href="https://www.brianbaldock.com/" />
   
-  <updated>2024-05-09T03:09:05Z</updated>
+  <updated>2024-05-09T03:17:25Z</updated>
   <id>https://www.brianbaldock.com/</id>
   <author>
     <name>Brian Baldock</name>
@@ -15,7 +15,7 @@
   <entry>
     <title>Command Lines and Shortcuts</title>
     <link href="https://www.brianbaldock.com/tidbits/command-lines-and-shortcuts/" />
-    <updated>2024-05-09T03:09:05Z</updated>
+    <updated>2024-05-09T03:17:25Z</updated>
     <id>https://www.brianbaldock.com/tidbits/command-lines-and-shortcuts/</id>
     <content xml:lang="" type="html">
 &lt;p&gt;I don&#39;t think there&#39;s a day where I haven&#39;t used a command line to do something a little extra or get behind the &lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; to complete tasks that developers didn&#39;t make straightforward for users. Sometimes, you don&#39;t want to give full control to a general user, but it would be nice to have a power user overlay in addition to the standard actions available to users. Here are some commands I use frequently throughout my days on the computer.&lt;/p&gt;
