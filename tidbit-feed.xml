@@ -6,7 +6,7 @@
   <link href="https://www.brianbaldock.com/tidbit-feed.xml" rel="self" />
   <link href="https://www.brianbaldock.com/" />
   
-  <updated>2024-05-09T03:17:25Z</updated>
+  <updated>2024-05-09T16:10:13Z</updated>
   <id>https://www.brianbaldock.com/</id>
   <author>
     <name>Brian Baldock</name>
@@ -15,7 +15,7 @@
   <entry>
     <title>Command Lines and Shortcuts</title>
     <link href="https://www.brianbaldock.com/tidbits/command-lines-and-shortcuts/" />
-    <updated>2024-05-09T03:17:25Z</updated>
+    <updated>2024-05-09T16:10:13Z</updated>
     <id>https://www.brianbaldock.com/tidbits/command-lines-and-shortcuts/</id>
     <content xml:lang="" type="html">
 &lt;p&gt;I don&#39;t think there&#39;s a day where I haven&#39;t used a command line to do something a little extra or get behind the &lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; to complete tasks that developers didn&#39;t make straightforward for users. Sometimes, you don&#39;t want to give full control to a general user, but it would be nice to have a power user overlay in addition to the standard actions available to users. Here are some commands I use frequently throughout my days on the computer.&lt;/p&gt;
@@ -28,19 +28,21 @@
 
 &lt;h2&gt;Windows&lt;/h2&gt;
 &lt;ol&gt;
-    &lt;li&gt;&lt;code&gt;Windows + v&lt;/code&gt; - With clipboard history enabled this brings up your history and you are able to pick and choose what to paste.
+    &lt;li&gt;&lt;code&gt;Windows + V&lt;/code&gt; - With clipboard history enabled this brings up your history and you are able to pick and choose what to paste.
         &lt;ul&gt;
             &lt;li&gt;To activate. Press &lt;code&gt;Windows + i&lt;/code&gt;. Search for &lt;i&gt;Clipboard Setting&lt;/i&gt;. &lt;b&gt;Turn on&lt;/b&gt; clipboard history. Thank me with a &lt;a href=&quot;https://www.buymeacoffee.com/bdock&quot;&gt;coffee&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;Windows + arrow key&lt;/code&gt; - Quickly change where your application is positioned on the screen. Using the arrow keys while holding the Windows key will move the Application Window around.&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;Windows + shift + arrow key&lt;/code&gt; - &lt;b&gt;BONUS&lt;/b&gt; - By holding the Window key, Shift and pressing an arrow key you will move the application window to another monitor if you have multiple setup.&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;Windows + Shift + S&lt;/code&gt; - Snip &amp;amp; Sketch tool. Screenshots are a must for what I do in my day to day.&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;Windows + Arrow Keys&lt;/code&gt; - Quickly change where your application is positioned on the screen. Using the arrow keys while holding the Windows key will move the Application Window around.&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;Windows + Shift + Arrow Key&lt;/code&gt; - &lt;b&gt;BONUS&lt;/b&gt; - By holding the Window key, Shift and pressing an arrow key you will move the application window to another monitor if you have multiple setup.&lt;/li&gt;
     &lt;li&gt;&lt;code&gt;del /s /q /f /a ._*&lt;/code&gt; - To further help clean up the nuisance .DS_Store files from a Mac. Navigate to the directory and let this command fly!&lt;/li&gt;
 &lt;/ol&gt;
 
+
 &lt;h2&gt;Mac OS&lt;/h2&gt;
     &lt;ol&gt;
-        &lt;li&gt;&lt;code&gt;CMD + i&lt;/code&gt; - I always need to know the property of a file and this is my go to.&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;⌘(cmd) + I&lt;/code&gt; - I always need to know the property of a file and this is my go to.&lt;/li&gt;
         &lt;li&gt;&lt;code&gt;find . -name &quot;.DS_Store&quot; -delete&lt;/code&gt; - Finds the annoying .DS_Store files and deletes them. If you transfer files you know what I am talking about!&lt;/li&gt;
         &lt;li&gt;&lt;code&gt;find . -name &quot;.DS_Store&quot; -type f -delete&lt;/code&gt; - Exclude directories and filter only for files.&lt;/li&gt;
     &lt;/ol&gt;</content>
