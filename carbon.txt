@@ -1,5 +1,4 @@
-[upstream]
-providers = [{ domain = 'github.com', service = 'paas' }]
-
-[org]
-credentials = [{ domain = 'brianbaldock.com', doctype = 'webpage', url = 'https://www.brianbaldock.com/' }]
+[upstream] providers = [{ domain = 'github.com', service =
+'paas' }] [org] credentials =
+[{ domain = 'brianbaldock.com', doctype =
+'webpage', url = 'https://www.brianbaldock.com/' }]
