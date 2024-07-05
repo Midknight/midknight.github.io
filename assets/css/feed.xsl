@@ -34,9 +34,9 @@
 
   <xsl:template match="atom:feed">
     <h1><xsl:value-of select="atom:title"/>'s Feed Preview</h1>
-    <p>This RSS feed provides the latest posts from <xsl:value-of select="atom:title"/>'s blog.
+    <p>This RSS feed provides the latest posts from <xsl:value-of select="atom:title"/>'s website.
 
-    <a class="head_link" target="_blank">
+    <a class="head_link" target="_blank" rel="noopener">
       <xsl:attribute name="href">
         <xsl:value-of select="atom:link[@rel='alternate']/@href"/>
       </xsl:attribute>
@@ -49,7 +49,7 @@
   <xsl:template match="atom:entry">
     <div class="entry">
       <h3>
-        <a target="_blank">
+        <a target="_blank" rel="noopener">
           <xsl:attribute name="href">
             <xsl:value-of select="atom:id"/>
           </xsl:attribute>
