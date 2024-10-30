@@ -8,6 +8,19 @@
       
 
       <url>
+        <loc>https://www.brianbaldock.com/tags/</loc>
+        <lastmod>2024-02-15T23:04:31.733Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
         <loc>https://www.brianbaldock.com/about/</loc>
         <lastmod>2024-02-15T23:04:31.787Z</lastmod>
         <changefreq>monthly</changefreq>
@@ -21,8 +34,8 @@
       
 
       <url>
-        <loc>https://www.brianbaldock.com/blog/</loc>
-        <lastmod>2024-02-15T23:04:31.789Z</lastmod>
+        <loc>https://www.brianbaldock.com/projects/</loc>
+        <lastmod>2024-02-15T23:04:31.793Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -34,8 +47,8 @@
       
 
       <url>
-        <loc>https://www.brianbaldock.com/</loc>
-        <lastmod>2024-02-15T23:04:31.799Z</lastmod>
+        <loc>https://www.brianbaldock.com/contact/</loc>
+        <lastmod>2024-02-15T23:04:31.796Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -49,19 +62,6 @@
       <url>
         <loc>https://www.brianbaldock.com/credits/</loc>
         <lastmod>2024-02-15T23:04:31.802Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>https://www.brianbaldock.com/tidbits/</loc>
-        <lastmod>2024-02-15T23:04:31.805Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -242,21 +242,8 @@
       
 
       <url>
-        <loc>https://www.brianbaldock.com/tidbits/html-characters/</loc>
-        <lastmod>2024-05-08T18:06:05.321Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>https://www.brianbaldock.com/tidbits/pitch-conversions/</loc>
-        <lastmod>2024-05-08T18:06:35.610Z</lastmod>
+        <loc>https://www.brianbaldock.com/tidbits/html5-input-patterns/</loc>
+        <lastmod>2024-05-08T18:06:14.193Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -294,8 +281,177 @@
       
 
       <url>
+        <loc>https://www.brianbaldock.com/tidbits/html-characters/</loc>
+        <lastmod>2024-07-09T03:58:08.652Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/tidbits/email-subject-lines/</loc>
+        <lastmod>2024-07-09T05:05:32.743Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/projects/_search-engine-optimization/</loc>
+        <lastmod>2024-07-15T19:59:33.290Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/tidbits/prusaslicer-settings/</loc>
+        <lastmod>2024-07-15T20:15:23.247Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/projects/_disconnecting-from-work/</loc>
+        <lastmod>2024-07-18T22:17:22.473Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/tidbits/contemplation/</loc>
+        <lastmod>2024-07-22T22:25:54.355Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/blog/</loc>
+        <lastmod>2024-08-15T03:13:13.625Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/</loc>
+        <lastmod>2024-08-15T03:21:34.602Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/tidbits/conversion-chart/</loc>
+        <lastmod>2024-08-15T03:33:09.211Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/tidbits/business-card-sizes/</loc>
+        <lastmod>2024-08-15T03:33:56.989Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/tidbits/pitch-conversions/</loc>
+        <lastmod>2024-08-15T03:44:06.405Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/tidbits/</loc>
+        <lastmod>2024-08-15T03:57:09.428Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
         <loc>https://www.brianbaldock.com/tidbits/helpful-tools/</loc>
-        <lastmod>2024-06-11T19:37:42.700Z</lastmod>
+        <lastmod>2024-08-15T04:03:52.534Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>https://www.brianbaldock.com/tidbits/command-lines-and-shortcuts/</loc>
+        <lastmod>2024-10-30T17:39:53.175Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
